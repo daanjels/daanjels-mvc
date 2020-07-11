@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+body {
+    &.carton-wrap {
+        background-image: url(#{$assets}/patterns/halftone.png);
+    }
+    &.canvas-wrap {
+        background-image: url(#{$assets}/patterns/white_wall.png);
+    }
+    &.paper-wrap {
+        background-image: url(#{$assets}/patterns/ep_naturalwhite.png);
+    }
+}

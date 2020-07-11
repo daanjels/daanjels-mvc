@@ -1,0 +1,26 @@
+// Fonts for daanjels.be
+@font-face {
+    font-family: Nunito;
+    src: url(#{$assets}/fonts/Nunito-ExtraLight.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(#{$assets}/fonts/Nunito-Light.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(#{$assets}/fonts/Nunito-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(#{$assets}/fonts/Nunito-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Merriweather;
+    src: url(#{$assets}/fonts/Merriweather-Light.ttf);
+    font-weight: 200;
+}  

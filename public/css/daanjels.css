@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Nunito;
+  src: url(/daanjels-mvc/public/assets/fonts/Nunito-ExtraLight.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Nunito;
+  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Merriweather;
+  src: url(/daanjels-mvc/public/assets/fonts/Merriweather-Light.ttf);
+  font-weight: 200;
+}
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body.carton-wrap {
+  background-image: url(/daanjels-mvc/public/assets/patterns/halftone.png);
+}
+body.canvas-wrap {
+  background-image: url(/daanjels-mvc/public/assets/patterns/white_wall.png);
+}
+body.paper-wrap {
+  background-image: url(/daanjels-mvc/public/assets/patterns/ep_naturalwhite.png);
+}
+
+main {
+  background-color: rgba(30, 30, 20, 0.1);
+}
+main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 180%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  max-width: 50rem;
+  color: #55554e;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+main article p:last-of-type {
+  padding-bottom: 3rem;
+}
+main article h1 {
+  font-weight: 300;
+  font-size: 2rem;
+}
+main article h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+main article h4 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #55554e;
+}
+main article h5 {
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #55554e;
+}
+main article picture img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  margin-bottom: -6px;
+}
+main section article {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+main section article h1 {
+  font-size: 1.8rem;
+}
+main section article p {
+  font-size: 1rem;
+  padding: 0.5rem 6rem;
+}
+main section article img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #55554e;
+  background-color: transparent;
+}
+footer summary, footer details p {
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 0.8rem;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+footer p {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  max-width: 18em;
+  margin: 4rem auto;
+}
+
+footer details p, footer summary {
+  font-style: normal;
+}
+
+/*# sourceMappingURL=daanjels.css.map */

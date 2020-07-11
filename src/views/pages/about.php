@@ -1,4 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<h1><?php echo $data['title']; ?></h1>
-<?php echo $data['description']; ?>
+<section>
+    <article>
+        <h1><?php echo $data['headline']; ?></h1>
+        <?php echo $data['content']; ?>
+    </article>
+</section>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

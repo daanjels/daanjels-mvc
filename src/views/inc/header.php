@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= SITENAME ?></title>
-    <link rel="stylesheet" href="<?= URLROOT; ?>/css/style.css">
+    <title><?= $data['title'] ?></title>
+    <link rel="stylesheet" href="<?= URLROOT; ?>/css/daanjels.css">
 </head>
-<body>
+<body class="<?= $data['wrap'] ?>-wrap">
 <?php require APPROOT . '/views/inc/navigation.php'; ?>
 <main>

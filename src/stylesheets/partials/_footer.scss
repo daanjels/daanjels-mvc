@@ -1,0 +1,26 @@
+footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: $text-dark;    
+    background-color: transparent;
+    summary, details p {
+        font-family: $font-sans-serif;
+        font-size: 0.8rem;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    // margin-top: 3rem;
+    p {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    max-width: 18em;
+    margin: 4rem auto;
+    }
+}
+footer details p, footer summary {
+    font-style: normal;
+}

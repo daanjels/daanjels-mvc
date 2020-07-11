@@ -1,0 +1,65 @@
+main {
+    background-color: $back-shade;
+    article {
+        h1, h2, h3, h4, h5, p {
+            font-family: $font-serif;
+            font-weight: 200;
+            font-size: 1.2rem;
+            line-height: 180%;
+            margin: 0 auto;
+            padding-top: 2rem;
+            padding-bottom: 0rem;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            max-width: 50rem;
+            color: $text-dark;
+            background-color: $back-light;
+        }
+        p:last-of-type {
+            padding-bottom: 3rem;
+        }
+        h1 { // titel
+            font-weight: 300;
+            font-size: 2rem;
+        }
+        h3 { // tussentitel
+            font-size: 1.6rem;
+            letter-spacing: 0.1rem;
+        }
+        h4 { // vraag
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $text-dark;
+        }
+        h5 { // info
+            font-family: $font-sans-serif;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: $text-dark;
+        }
+        picture img {
+            width: 100%;
+            height: 40rem;
+            object-fit: cover;
+            margin-bottom: -6px;
+        }
+        
+    }
+    section {
+        article {
+            max-width: 50rem;
+            margin: 0 auto;
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+                padding: 0.5rem 6rem;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
