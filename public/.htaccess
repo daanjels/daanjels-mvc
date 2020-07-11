@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine On
+    # add the directory
+    RewriteBase /daanjels-mvc/public
+    # if the directory or file is not found 
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # go to the rewriterule which says index.php and add the url parameter
+    RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;   
+}
+
+body {
+    display: block;
+}
+
+main {
+    margin-top: 2.5rem;
+}
+h1 {
+    margin: 1rem 1rem;
+}
+
+p {
+    margin: 1rem 1rem;
+    font-size: 1rem;
+}
+input {
+    margin: 0.5rem 1rem;
+    width: 12rem;
+    display: block;
+}
+input[type=submit], form a {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 1rem;
+    background-color: #c4e4e4;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: auto;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 1rem;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+nav {
+    display: block;
+    font-family: sans-serif;
+    background: #c4e4e4;
+}
+nav.left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+/* position this nav to the top right */
+nav.right {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+/* remove left indent for list */
+ul {
+    padding-left: 0;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    padding: 0.5rem 0.5rem;
+    line-height: 2.15rem;
+}
+nav ul li a:hover {
+    padding: 0.5rem 0.5rem;
+    line-height: 2.15rem;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.is-invalid {
+    color: #dd5050;
+}
+
+pre {
+    display: inline-block;
+    margin: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #508850;
+    color: #ffeeff;
+}
