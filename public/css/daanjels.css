@@ -41,8 +41,87 @@ body.paper-wrap {
   background-image: url(/daanjels-mvc/public/assets/patterns/ep_naturalwhite.png);
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  font-family: "Nunito", Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+nav.topmenu {
+  background-color: rgba(30, 30, 20, 0.8);
+}
+nav ul {
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a, nav ul li a:visited, nav ul li em {
+  display: inline-block;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 18px;
+  color: #eeeeea;
+  padding: 11px 18px;
+  text-decoration: none;
+}
+nav ul li a.sitename, nav ul li a:visited.sitename, nav ul li em.sitename {
+  letter-spacing: 0.1rem;
+  padding-left: 30px;
+}
+nav ul li em {
+  font-weight: 400;
+}
+nav ul li a:hover {
+  background-color: rgba(30, 30, 20, 0.8);
+}
+nav ul.is-closed {
+  display: none;
+}
+nav.dropmenu {
+  right: 0;
+  width: auto;
+  text-align: right;
+}
+nav.dropmenu ul li {
+  display: block;
+  text-align: right;
+  background-color: rgba(30, 30, 20, 0.8);
+}
+nav.dropmenu ul li:first-of-type {
+  padding-top: 40px;
+}
+nav.dropmenu ul li a {
+  display: block;
+  width: auto;
+}
+nav.dropmenu button {
+  display: block;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #eeeeea;
+  padding: 11px 18px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-width: 3em;
+  border: none;
+  background-color: rgba(30, 30, 20, 0.8);
+}
+nav.dropmenu button:hover {
+  background-color: rgba(30, 30, 20, 0.8);
+}
+nav.dropmenu button.is-opened {
+  display: none;
+}
+
 main {
   background-color: rgba(30, 30, 20, 0.1);
+  padding-top: 40px;
 }
 main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
   font-family: "Merriweather", Georgia, serif;

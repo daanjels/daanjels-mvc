@@ -17,6 +17,7 @@ class Pages extends Controller
 
         $data = [
             'title' => 'd a: n j e l s',
+            'page' => 'index',
             'wrap' => 'canvas',
             'content' => '
                 <article>
@@ -69,7 +70,8 @@ class Pages extends Controller
     public function about()
     {
         $data = [
-            'title'=>'About',
+            'title'=>'Wie?',
+            'page' => 'about',
             'wrap' => 'paper',
             'headline' => 'Opkomst van een portretschilder',
             'content' => '
