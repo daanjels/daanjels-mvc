@@ -1,7 +1,10 @@
 # Website for showing artwork created in PHP
 
-## Built on a framework by Brad Traversy
-Thanks for that!
+## Objective
+Portfolio of my artwork. Both paintings and drawings.
+Includes an about page and a contact form.
 
-## Objective is to show artworks in collections
 So enjoy once it is up and running: www.daanjels.be 
+
+### Thanks
+Built on a framework by Brad Traversy
