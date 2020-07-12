@@ -188,6 +188,19 @@ main section article img {
   height: auto;
 }
 
+main header {
+  color: #55554e;
+  padding: 2rem 6rem;
+  background-color: rgba(30, 30, 20, 0.1);
+}
+main header article h1 {
+  padding-top: 1rem;
+}
+main header article p {
+  line-height: 1.5rem;
+  padding-top: 0;
+}
+
 main blockquote {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 400;

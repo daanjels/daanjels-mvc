@@ -1,0 +1,16 @@
+main {
+    header {
+        color: $text-dark;
+        padding: 2rem 6rem;
+        background-color: $back-shade;
+        article {
+            h1 {
+                padding-top: 1rem;
+            }
+            p {
+            line-height: 1.5rem;
+            padding-top: 0;
+            }
+        }
+    }
+}
