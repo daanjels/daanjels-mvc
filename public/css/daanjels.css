@@ -149,21 +149,22 @@ main article p:last-of-type {
 main article h1 {
   font-weight: 300;
   font-size: 2rem;
+  color: #5e5e57;
 }
 main article h3 {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
+  color: #5e5e57;
 }
 main article h4 {
   font-weight: 700;
   font-size: 1.4rem;
-  color: #55554e;
+  color: #5e5e57;
 }
 main article h5 {
   font-family: "Nunito", Arial, sans-serif;
   font-weight: normal;
   font-size: 1.2rem;
-  color: #55554e;
 }
 main article picture img {
   width: 100%;
@@ -185,6 +186,54 @@ main section article p {
 main section article img {
   width: 100%;
   height: auto;
+}
+
+main blockquote {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  margin: 6rem auto;
+  padding: 2rem 6rem;
+  max-width: 28rem;
+  color: #5e5e57;
+}
+main blockquote img {
+  display: block;
+  width: auto;
+  height: 1.8rem;
+}
+main blockquote img.left {
+  margin-bottom: -1.4rem;
+  margin-left: -1.8rem;
+}
+main blockquote img.right {
+  margin-top: -2.7rem;
+  margin-left: auto;
+  margin-right: -1.8rem;
+  margin-bottom: 1.4rem;
+}
+main blockquote p {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: right;
+  color: #55554e;
+  margin-right: -1.4rem;
+}
+main blockquote cite {
+  display: block;
+  font-family: "Nunito", Arial, sans-serif;
+  font-style: normal;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-align: right;
+  color: #55554e;
+  margin-right: -1.4rem;
 }
 
 form {

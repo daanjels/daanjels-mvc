@@ -22,21 +22,22 @@ main {
         h1 { // titel
             font-weight: 300;
             font-size: 2rem;
+            color: $title-dark;
         }
         h3 { // tussentitel
             font-size: 1.6rem;
             letter-spacing: 0.1rem;
+            color: $title-dark;
         }
         h4 { // vraag
             font-weight: 700;
             font-size: 1.4rem;
-            color: $text-dark;
+            color: $title-dark;
         }
         h5 { // info
             font-family: $font-sans-serif;
             font-weight: normal;
             font-size: 1.2rem;
-            color: $text-dark;
         }
         picture img {
             width: 100%;

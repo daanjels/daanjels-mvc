@@ -1,0 +1,47 @@
+main blockquote {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 6rem auto;
+    padding: 2rem 6rem;
+    max-width: 28rem;
+    color: $title-dark;
+    img {
+        display: block;
+        width: auto;
+        height: 1.8rem;
+        &.left {
+            margin-bottom: -1.4rem;
+            margin-left: -1.8rem;
+        }
+        &.right {
+            margin-top: -2.7rem;
+            margin-left: auto;
+            margin-right: -1.8rem;
+            margin-bottom: 1.4rem;
+        }
+    }
+    p {
+        font-family: $font-serif;
+        font-weight:200;
+        font-style: normal;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: right;
+        color: $text-dark;
+        margin-right: -1.4rem;
+    }
+    cite {
+        display: block;
+        font-family: $font-sans-serif;
+        font-style: normal;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        text-align: right;
+        color: $text-dark;
+        margin-right: -1.4rem;
+    }
+}
