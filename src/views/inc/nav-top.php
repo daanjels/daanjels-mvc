@@ -11,11 +11,11 @@
             } else {
                 echo '<li><a href="'.URLROOT.'/about">Wie?</a></li>';
             };
-            // if ($data['page'] == "contact") {
-            //     echo '<li><em>'.data['title'].'</em></li>';
-            // } else {
-            //     echo '<li><a href="'.URLROOT.'/contact">Contact</a></li>';
-            // };
+            if ($data['page'] == "contact") {
+                echo '<li><em>'.$data['title'].'</em></li>';
+            } else {
+                echo '<li><a href="'.URLROOT.'/contact">Contact</a></li>';
+            };
         ?>
     </ul>
 </nav>

@@ -113,6 +113,15 @@ class Pages extends Controller
         $this->view('pages/about', $data);
     }
 
+    public function contact()
+    {
+        $data = [
+            'title'=>'Contact',
+            'page' => 'contact',
+            'wrap' => 'paper',
+        ];
+        $this->view('pages/contact', $data);
+    }
     public function design()
     {
         $this->view('pages/design');

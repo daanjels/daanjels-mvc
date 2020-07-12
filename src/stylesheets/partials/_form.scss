@@ -1,0 +1,37 @@
+form {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.form {
+    text-align: center;
+    background-color: transparent;
+}
+input, textarea {
+    display: block;
+    min-width: 25rem;
+    max-width: 25rem;
+    margin: 1rem auto;
+    border: none;
+    font-family: 'Nunito','Arial',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $text-dark;
+    padding: 0.5rem;
+    // background-color: rgba(255, 255, 255, 0.6);
+    background-color: $back-light;
+}
+input[type=submit] {
+    background-color: rgba(30, 30, 20, 0.4);
+    // background-color: $back-dark;
+    color: $text-light;
+    box-sizing: content-box;
+    &:hover {
+        // background-color: rgba(0, 0, 0, 0.7);
+        background-color: $back-dark;
+    }
+}
+label {
+    font-family: 'Nunito','Arial',sans-serif;
+    font-size: 1rem;
+    color: #aa2222;
+}

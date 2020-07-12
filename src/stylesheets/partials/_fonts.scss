@@ -23,4 +23,10 @@
     font-family: Merriweather;
     src: url(#{$assets}/fonts/Merriweather-Light.ttf);
     font-weight: 200;
-}  
+}
+@font-face {
+    font-family: Merriweather;
+    src: url(#{$assets}/fonts/Merriweather-LightItalic.ttf);
+    font-weight: 200;
+    font-style: italic;
+}

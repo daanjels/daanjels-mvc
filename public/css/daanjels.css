@@ -23,6 +23,12 @@
   src: url(/daanjels-mvc/public/assets/fonts/Merriweather-Light.ttf);
   font-weight: 200;
 }
+@font-face {
+  font-family: Merriweather;
+  src: url(/daanjels-mvc/public/assets/fonts/Merriweather-LightItalic.ttf);
+  font-weight: 200;
+  font-style: italic;
+}
 * {
   margin: 0;
 }
@@ -135,7 +141,7 @@ main article h1, main article h2, main article h3, main article h4, main article
   padding-right: 6rem;
   max-width: 50rem;
   color: #55554e;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 main article p:last-of-type {
   padding-bottom: 3rem;
@@ -179,6 +185,45 @@ main section article p {
 main section article img {
   width: 100%;
   height: auto;
+}
+
+form {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.form {
+  text-align: center;
+  background-color: transparent;
+}
+
+input, textarea {
+  display: block;
+  min-width: 25rem;
+  max-width: 25rem;
+  margin: 1rem auto;
+  border: none;
+  font-family: "Nunito", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #55554e;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+input[type=submit] {
+  background-color: rgba(30, 30, 20, 0.4);
+  color: #eeeeea;
+  box-sizing: content-box;
+}
+input[type=submit]:hover {
+  background-color: rgba(30, 30, 20, 0.8);
+}
+
+label {
+  font-family: "Nunito", "Arial", sans-serif;
+  font-size: 1rem;
+  color: #aa2222;
 }
 
 footer {
