@@ -10,7 +10,7 @@ section {
             margin-top: -0.25em;
             &.mosaic {
                 display: inline-block;
-                width: 33%;
+                width: 33.3%;
             }
         }
     }
@@ -28,6 +28,9 @@ section {
     img {
         width : 100%;
         padding: 1px;
+        &:hover {
+            filter: brightness(90%);
+        }
     }
     div.col {
         flex: 25%;

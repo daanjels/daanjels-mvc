@@ -27,7 +27,7 @@ if ($data['mosaic'] == 'pins') {
     <div class="col" id="<?= $col ?>">
         <?php foreach($list as $key => $value) { ?>
         <figure class="mosaic" onclick="showDetail('<?= $key; ?>')">
-            <img src="<?= URLROOT.$value['img']; ?>" alt="Painting <?= $data['page'].' '.$value['title']; ?>"/>
+            <img src="<?= MEDIAROOT.$value['path']; ?>" alt="Painting <?= $data['page'].' '.$value['title']; ?>"/>
         </figure>
         <?php } ?>
     </div>
@@ -37,7 +37,7 @@ if ($data['mosaic'] == 'pins') {
     foreach($works as $id => $art) {
       $count++; ?>
       <figure class="mosaic" onclick="showDetail('<?= $id; ?>')" >
-        <img src="<?= URLROOT.$art['img']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
+        <img src="<?= MEDIAROOT.$art['path']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
       </figure><?php }
   } ?>
 </section>
@@ -62,7 +62,7 @@ foreach($works as $id => $art) {
       <button id="next" onclick="showDetail(<?= $next ?>)">&gt;</button>
       <button id="closedetail" onclick="hideDetail('<?= $id ?>')" alt="overzicht">×</button>
     </nav>
-    <img src="<?= URLROOT.$art['img'] ?>" alt="Painting <?= $data['page'] ?> <?= $art['title'] ?>">
+    <img src="<?= MEDIAROOT.$art['path'] ?>" alt="Painting <?= $data['page'] ?> <?= $art['title'] ?>">
     <figcaption>
       <h3><?= $art['title'] ?></h3>
       <p><?= $art['caption'] ?></p>

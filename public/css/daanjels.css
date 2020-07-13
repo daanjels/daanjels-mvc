@@ -308,7 +308,7 @@ section.grid-3 figure {
 }
 section.grid-3 figure.mosaic {
   display: inline-block;
-  width: 33%;
+  width: 33.3%;
 }
 section.grid-5 {
   padding: 0.3rem 2rem;
@@ -324,6 +324,9 @@ section.grid-5 figure.mosaic {
 section img {
   width: 100%;
   padding: 1px;
+}
+section img:hover {
+  filter: brightness(90%);
 }
 section div.col {
   flex: 25%;
@@ -438,6 +441,118 @@ footer p {
 
 footer details p, footer summary {
   font-style: normal;
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  main header {
+    padding: 3rem 3rem;
+  }
+  main header article h1, main header article p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
+    padding-top: 1rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  main article picture img {
+    height: 30rem;
+  }
+  main section article h1 {
+    padding-top: 2rem;
+  }
+  main section article p {
+    padding: 0.5rem 4rem;
+  }
+
+  section {
+    padding: 0rem 1rem;
+  }
+  section.grid-3 {
+    padding: 0.3rem 1rem;
+  }
+  section.grid-5 {
+    padding: 0.3rem 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+
+  main header {
+    padding: 2rem 6rem;
+  }
+  main header article h1, main header article p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
+    padding-top: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  main article picture img {
+    height: 36rem;
+  }
+  main section article h1 {
+    padding-top: 2rem;
+  }
+  main section article p {
+    padding: 1rem 4rem;
+  }
+
+  section {
+    padding: 0rem 2rem;
+  }
+  section.grid-3 {
+    padding: 0.3rem 2rem;
+  }
+  section.grid-5 {
+    padding: 0.3rem 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  main header {
+    padding: 1rem 1rem;
+  }
+  main header article h1, main header article p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main article picture img {
+    height: 24rem;
+  }
+  main section article h1 {
+    padding-top: 2rem;
+  }
+  main section article p {
+    padding: 0.5rem 1rem;
+  }
+
+  section {
+    padding: 0rem 0rem;
+  }
+  section.grid-3 {
+    padding: 0.3rem 0rem;
+  }
+  section.grid-5 {
+    padding: 0.3rem 0rem;
+  }
 }
 
 /*# sourceMappingURL=daanjels.css.map */

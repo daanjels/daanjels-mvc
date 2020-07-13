@@ -11,3 +11,4 @@ define('DB_NAME', 'database'); // adapt as needed
 
 // define app root as a constant
 define('APPROOT', dirname(dirname(__FILE__)));
+define('MEDIAROOT', URLROOT.'/public/media');
