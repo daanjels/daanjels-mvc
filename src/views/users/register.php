@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT.'/views/inc/header.php'; ?>
 <h1><?php echo $data['title']; ?></h1>
 <p><?php echo $data['description']; ?></p>
 <form method="POST" action="<?= URLROOT; ?>/users/register">
@@ -17,4 +17,4 @@
     <input type="submit" value="Register">
     <a href="<?= URLROOT; ?>/users/login">or login</a>
 </form>
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+<?php require APPROOT.'/views/inc/footer.php'; ?>

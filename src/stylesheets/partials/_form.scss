@@ -24,7 +24,6 @@ input[type=submit] {
     background-color: rgba(30, 30, 20, 0.4);
     // background-color: $back-dark;
     color: $text-light;
-    box-sizing: content-box;
     &:hover {
         // background-color: rgba(0, 0, 0, 0.7);
         background-color: $back-dark;

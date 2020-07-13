@@ -18,8 +18,7 @@ class Core
         // if there is just one part in the url, add Pages in front to turn it into a method
         if (empty($url)) {
             $url = ['Pages']; // it will default to index anyway
-        } else if (count($url) == 1) {
-            array_unshift($url, 'Pages');
+            // echo '<h1>Empty url!</h1>';
         }
 
         // look in controllers for first part in url
@@ -29,6 +28,10 @@ class Core
             $this->currentController = ucwords($url[0]);
             // unset class
             unset($url[0]); // indexes stay the same [1] is still the method
+            // echo '<h1>Class was foundl!</h1>';
+        } elseif (count($url) == 1) {
+            array_unshift($url, 'Pages');
+            $this->currentController = 'Pages';
         }
 
         // require the controller class

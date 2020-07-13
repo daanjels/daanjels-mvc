@@ -31,6 +31,7 @@
 }
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -57,7 +58,7 @@ nav {
   letter-spacing: 0.1rem;
 }
 nav.topmenu {
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 nav ul {
   padding: 0;
@@ -82,7 +83,7 @@ nav ul li em {
   font-weight: 400;
 }
 nav ul li a:hover {
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 nav ul.is-closed {
   display: none;
@@ -95,7 +96,7 @@ nav.dropmenu {
 nav.dropmenu ul li {
   display: block;
   text-align: right;
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 nav.dropmenu ul li:first-of-type {
   padding-top: 40px;
@@ -116,17 +117,17 @@ nav.dropmenu button {
   width: 100%;
   min-width: 3em;
   border: none;
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 nav.dropmenu button:hover {
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 nav.dropmenu button.is-opened {
   display: none;
 }
 
 main {
-  background-color: rgba(30, 30, 20, 0.1);
+  background-color: rgba(30, 30, 20, 0.15);
   padding-top: 40px;
 }
 main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
@@ -144,12 +145,13 @@ main article h1, main article h2, main article h3, main article h4, main article
   background-color: rgba(255, 255, 255, 0.4);
 }
 main article p:last-of-type {
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 main article h1 {
   font-weight: 300;
   font-size: 2rem;
   color: #5e5e57;
+  padding-top: 6rem;
 }
 main article h3 {
   font-size: 1.6rem;
@@ -178,6 +180,7 @@ main section article {
 }
 main section article h1 {
   font-size: 1.8rem;
+  padding-top: 2rem;
 }
 main section article p {
   font-size: 1rem;
@@ -191,7 +194,7 @@ main section article img {
 main header {
   color: #55554e;
   padding: 2rem 6rem;
-  background-color: rgba(30, 30, 20, 0.1);
+  background-color: rgba(30, 30, 20, 0.15);
 }
 main header article h1 {
   padding-top: 1rem;
@@ -199,6 +202,9 @@ main header article h1 {
 main header article p {
   line-height: 1.5rem;
   padding-top: 0;
+}
+main header article p:last-of-type {
+  padding-bottom: 2rem;
 }
 
 main blockquote {
@@ -276,16 +282,133 @@ input, textarea {
 input[type=submit] {
   background-color: rgba(30, 30, 20, 0.4);
   color: #eeeeea;
-  box-sizing: content-box;
 }
 input[type=submit]:hover {
-  background-color: rgba(30, 30, 20, 0.8);
+  background-color: rgba(30, 30, 20, 0.75);
 }
 
 label {
   font-family: "Nunito", "Arial", sans-serif;
   font-size: 1rem;
   color: #aa2222;
+}
+
+section {
+  padding: 0rem 2em;
+}
+section.pins {
+  display: flex;
+}
+section.grid-3 {
+  padding: 0.3rem 2rem;
+}
+section.grid-3 figure {
+  margin-right: -0.25em;
+  margin-top: -0.25em;
+}
+section.grid-3 figure.mosaic {
+  display: inline-block;
+  width: 33%;
+}
+section.grid-5 {
+  padding: 0.3rem 2rem;
+}
+section.grid-5 figure {
+  margin-right: -0.25em;
+  margin-top: -0.25em;
+}
+section.grid-5 figure.mosaic {
+  display: inline-block;
+  width: 20%;
+}
+section img {
+  width: 100%;
+  padding: 1px;
+}
+section div.col {
+  flex: 25%;
+}
+section div figure.mosaic {
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+#details {
+  font-family: "Nunito", Arial, sans-serif;
+  background-color: rgba(20, 0, 0, 0.1);
+  text-align: center;
+}
+#details figure {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+}
+#details figure img {
+  width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin-bottom: -5px;
+}
+#details figure nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  line-height: 2.5rem;
+  color: #eeeeea;
+}
+#details figure nav button {
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #eeeeea;
+  flex-grow: 1;
+  padding: 0.25rem 0;
+}
+#details figure nav button:hover {
+  background-color: rgba(30, 30, 20, 0.5);
+}
+#details figure nav #prev, #details figure nav #next {
+  font-size: 1.5rem;
+}
+#details figure nav #closedetail {
+  font-size: 1.5rem;
+  flex-grow: 0;
+  width: 2rem;
+}
+#details figure figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#details figure figcaption h3 {
+  color: #eeeeea;
+}
+#details figure figcaption p {
+  visibility: hidden;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
+}
+#details figure figcaption:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#details figure figcaption:hover h3 {
+  color: #3e3e30;
+}
+#details figure figcaption:hover p {
+  color: #3e3e30;
+  visibility: visible;
 }
 
 footer {

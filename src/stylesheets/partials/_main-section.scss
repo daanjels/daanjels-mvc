@@ -17,12 +17,13 @@ main {
             background-color: $back-light;
         }
         p:last-of-type {
-            padding-bottom: 3rem;
+            padding-bottom: 6rem;
         }
         h1 { // titel
             font-weight: 300;
             font-size: 2rem;
             color: $title-dark;
+            padding-top: 6rem;
         }
         h3 { // tussentitel
             font-size: 1.6rem;
@@ -53,6 +54,7 @@ main {
             margin: 0 auto;
             h1 {
                 font-size: 1.8rem;
+                padding-top: 2rem;
             }
             p {
                 font-size: 1rem;

@@ -1,0 +1,40 @@
+section {
+    padding: 0rem 2em;
+    &.pins {
+        display: flex;
+    }
+    &.grid-3 {
+        padding: 0.3rem 2rem;
+        figure {
+            margin-right: -0.25em;
+            margin-top: -0.25em;
+            &.mosaic {
+                display: inline-block;
+                width: 33%;
+            }
+        }
+    }
+    &.grid-5 {
+        padding: 0.3rem 2rem;
+        figure {
+            margin-right: -0.25em;
+            margin-top: -0.25em;
+            &.mosaic {
+                display: inline-block;
+                width: 20%;
+            }
+        }
+    }
+    img {
+        width : 100%;
+        padding: 1px;
+    }
+    div.col {
+        flex: 25%;
+    }
+    div figure {
+        &.mosaic {
+            flex-wrap: wrap;
+        }
+    }
+}

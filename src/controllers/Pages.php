@@ -16,8 +16,9 @@ class Pages extends Controller
         $alt = 'Detail van ogen';
 
         $data = [
-            'title' => 'd a: n j e l s',
+            'title' => 'd a: n j ə l s  -  kunstwerken van Daanjels',
             'page' => 'index',
+            'menu' => 'da:njəls',
             'wrap' => 'canvas',
             'content' => '
                 <article>
@@ -70,8 +71,9 @@ class Pages extends Controller
     public function about()
     {
         $data = [
-            'title'=>'Wie?',
+            'title'=>'Wie is Daanjels, de portretschilder',
             'page' => 'about',
+            'menu' => 'Wie?',
             'wrap' => 'paper',
             'headline' => 'Opkomst van een portretschilder',
             'content' => '
@@ -116,8 +118,9 @@ class Pages extends Controller
     public function contact()
     {
         $data = [
-            'title'=>'Contact',
+            'title'=>'Contacteer Daanjels',
             'page' => 'contact',
+            'menu' => 'Contact',
             'wrap' => 'paper',
         ];
         $this->view('pages/contact', $data);

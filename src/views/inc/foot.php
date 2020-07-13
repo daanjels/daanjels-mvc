@@ -15,4 +15,3 @@
       <p>All content and graphics on this web site are the property of Wim Dani&euml;ls.</p>
     </details>
   </footer>
-</main>
