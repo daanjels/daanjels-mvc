@@ -15,7 +15,7 @@ class Core
         $url = $this->getURL();
         // print_r($url); // print the array
 
-        // if there is just one part in the url, add Pages in front to turn it into a method
+        // if there is nothing extra in the url, add Pages in front to turn it into a method
         if (empty($url)) {
             $url = ['Pages']; // it will default to index anyway
             // echo '<h1>Empty url!</h1>';
@@ -29,7 +29,7 @@ class Core
             // unset class
             unset($url[0]); // indexes stay the same [1] is still the method
             // echo '<h1>Class was foundl!</h1>';
-        } elseif (count($url) == 1) {
+        } elseif (count($url) == 1) { // if the first and single part is not a class, add Pages in front to turn it into a method
             array_unshift($url, 'Pages');
             $this->currentController = 'Pages';
         }
@@ -58,6 +58,7 @@ class Core
             $this->currentMethod], $this->params);
         
     }
+    
     public function getURL()
     {
         // echo $_GET['url'];

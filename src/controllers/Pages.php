@@ -3,6 +3,7 @@ class Pages extends Controller
 {
     public function __construct()
     {
+        $this->pageModel = $this->model('Page');
         // activate models here: $this->exampleModel = $this->model('Example');
         // for now we'll keep this simple and do most stuff in the views
         // later on we may collect parts from the database
@@ -14,6 +15,7 @@ class Pages extends Controller
         // $example = $this->exampleModel->getExample();
         $selectedImage = 'media/img/homeCloseUp';
         $alt = 'Detail van ogen';
+        $quote = $this->pageModel->getQuote();
 
         $data = [
             'title' => 'd a: n j ə l s  -  kunstwerken van Daanjels',
@@ -63,7 +65,7 @@ class Pages extends Controller
                         <a href="contact">contacteer ons</a>.</p>
                 </article>
                 ',
-            // 'example' => $example,
+            'quote' => $quote
         ];
         $this->view('pages/index', $data);
     }
