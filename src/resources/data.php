@@ -593,6 +593,16 @@ $artworks[604] = [
     "category" => "landscape",
     "collection" => "summer",
 ];
+$artworks[607] = [
+	"title" => "Windmill",
+	"img" => "/public/media/images/Windmill.jpg",
+    "caption" => "36 x 48 cm • watercolour • 2018",
+    "medium" => "Watercolour",
+    "material" => "paper",
+    "year" => 2018,
+    "category" => "landscape",
+    "collection" => "summer",
+];
 $artworks[605] = [
 	"title" => "Tank",
 	"img" => "/public/media/images/Tank.jpg",
@@ -608,16 +618,6 @@ $artworks[606] = [
 	"img" => "/public/media/images/Willow.jpg",
     "caption" => "44 x 34 cm • pastel • 2018",
     "medium" => "pastel",
-    "material" => "paper",
-    "year" => 2018,
-    "category" => "landscape",
-    "collection" => "summer",
-];
-$artworks[607] = [
-	"title" => "Windmill",
-	"img" => "/public/media/images/Windmill.jpg",
-    "caption" => "36 x 48 cm • watercolour • 2018",
-    "medium" => "Watercolour",
     "material" => "paper",
     "year" => 2018,
     "category" => "landscape",
@@ -643,16 +643,6 @@ $artworks[609] = [
     "category" => "landscape",
     "collection" => "summer",
 ];
-$artworks[610] = [
-	"title" => "Fishing pond",
-	"img" => "/public/media/images/Fishing pond.jpg",
-    "caption" => "38 x 27 cm • watercolour • 2017",
-    "medium" => "Watercolour",
-    "material" => "paper",
-    "year" => 2017,
-    "category" => "landscape",
-    "collection" => "summer",
-];
 $artworks[611] = [
 	"title" => "Jetty",
 	"img" => "/public/media/images/Jetty.jpg",
@@ -660,6 +650,16 @@ $artworks[611] = [
     "medium" => "Watercolour",
     "material" => "Arches paper",
     "year" => 2018,
+    "category" => "landscape",
+    "collection" => "summer",
+];
+$artworks[610] = [
+	"title" => "Fishing pond",
+	"img" => "/public/media/images/Fishing pond.jpg",
+    "caption" => "38 x 27 cm • watercolour • 2017",
+    "medium" => "Watercolour",
+    "material" => "paper",
+    "year" => 2017,
     "category" => "landscape",
     "collection" => "summer",
 ];

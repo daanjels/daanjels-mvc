@@ -1,3 +1,15 @@
+function toggleMenu() {
+  var menuWrapper = document.querySelector('.menu-wrapper');
+  var menuButton = document.querySelector('.menu-open');
+  if (document.querySelector('.is-closed')) {
+    menuWrapper.classList.remove('is-closed');
+    menuButton.classList.add('is-opened');
+  } else {
+    menuWrapper.classList.add('is-closed');
+    menuButton.classList.remove('is-opened');
+  }
+}
+
 function showDetail(selected) {
   document.getElementById('main').style.display = 'none';
   var details = document.getElementById('details').getElementsByTagName('figure');
