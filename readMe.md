@@ -1,4 +1,5 @@
-# Website for showing artwork created in PHP
+# Website for showing artwork 
+## built with PHP
 
 ## Objective
 Portfolio of my artwork. Both paintings and drawings.
