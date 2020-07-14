@@ -25,26 +25,25 @@ if ($data['mosaic'] == 'pins') {
     }
     foreach($cols as $col => $list) { ?>
     <div class="col" id="<?= $col ?>">
-        <?php foreach($list as $key => $value) { ?>
-        <figure class="mosaic" onclick="showDetail('<?= $key; ?>')">
+      <?php foreach($list as $key => $value) { ?>
+        <figure class="mosaic">
+          <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$key ?>">
             <img src="<?= MEDIAROOT.$value['path']; ?>" alt="Painting <?= $data['page'].' '.$value['title']; ?>"/>
+          </a>
         </figure>
-        <?php } ?>
+      <?php } ?>
     </div>
     <?php }
   } else {
     $count = 0;
-    foreach($works as $id => $art) {
+    foreach($works as $key => $art) {
       $count++; ?>
-      <figure class="mosaic" onclick="showDetail('<?= $id; ?>')" >
-        <img src="<?= MEDIAROOT.$art['path']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
+      <figure class="mosaic">
+        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$key ?>">
+          <img src="<?= MEDIAROOT.$art['path']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
+        </a>
       </figure><?php }
   } ?>
 </section>
 <?php 
-// require APPROOT.'/views/inc/footer.php';
-require APPROOT.'/views/inc/foot.php'; 
-?>
-</main>
-
-<?php require APPROOT.'/views/inc/detail.php'; ?>
+require APPROOT.'/views/inc/footer.php';

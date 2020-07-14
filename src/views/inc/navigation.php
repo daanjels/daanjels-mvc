@@ -1,4 +1,3 @@
 <?php
-    require 'nav-top.php';
-    require 'nav-dropdown.php';
-    
+require 'nav-top.php';
+require 'nav-dropdown.php';    

@@ -48,6 +48,10 @@ body.paper-wrap {
   background-image: url(/daanjels-mvc/public/assets/patterns/ep_naturalwhite.png);
 }
 
+a {
+  text-decoration: none;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -371,14 +375,13 @@ button {
   line-height: 2.5rem;
   color: #eeeeea;
 }
-#details figure nav button {
+#details figure nav a, #details figure nav button {
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 0.9rem;
   color: #eeeeea;
   flex-grow: 1;
   padding: 0.25rem 0;
 }
-#details figure nav button:hover {
+#details figure nav a:hover, #details figure nav button:hover {
   background-color: rgba(30, 30, 20, 0.5);
 }
 #details figure nav #prev, #details figure nav #next {

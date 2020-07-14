@@ -10,9 +10,9 @@ class Portfolios extends Controller
     {
         redirect('portfolios/portrait');
     }
-    public function portrait()
+    public function portrait($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('portrait');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Portraits by Daanjels',
             'page' => 'portrait',
@@ -24,13 +24,23 @@ class Portfolios extends Controller
                 Dit is nog moeilijker dan een figuur omdat de gelijkenis — of je het nu wil of niet — altijd een rol speelt.
                 Hoe langer ik portretten schilder hoe meer ik besef dat compositie en sfeer essentieel zijn voor een geslaagd portret.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('portrait');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false'; // this turns the navigation off, should refactor this later
+            // print_r($art);
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function landscape()
+    public function landscape($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('landscape');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Landscapes by Daanjels',
             'page' => 'landscape',
@@ -42,13 +52,22 @@ class Portfolios extends Controller
                 Hier heb ik bewust gekozen om een landschap op portret ori&euml;ntatie te maken.
                 Door het opstaande formaat vind je er gemakkelijk een plek voor in huis.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('landscape');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false';
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function bird()
+    public function bird($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('bird');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Birds painted by Daanjels',
             'page' => 'bird',
@@ -59,13 +78,22 @@ class Portfolios extends Controller
                 <p>Een reeks schilderijtjes van vogels die af en toe in de tuin passeren.
                 Interessante oefeningen waar ik voor het eerst de verf dikker begon te gebruiken.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('bird');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false';
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function figure()
+    public function figure($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('figure');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Figure paintings by Daanjels',
             'page' => 'figure',
@@ -78,13 +106,22 @@ class Portfolios extends Controller
                 In zo\'n korte tijd moet je aandachtig te werk gaan.
                 Enkel dankzij uiterste concentratie kun je de essentie van een pose vatten.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('figure');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false';
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function figurestudy()
+    public function figurestudy($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('figurestudy');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Studies by Daanjels',
             'page' => 'figurestudy',
@@ -98,13 +135,22 @@ class Portfolios extends Controller
                 anderen zien meteen waar verhoudingen niet snor zitten.
                 Na jarenlange praktijk begint dat stilaan te verbeteren.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('figurestudy');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false';
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function pleinair()
+    public function pleinair($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('pleinair');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Outdoor painting by Daanjels',
             'page' => 'pleinair',
@@ -117,13 +163,22 @@ class Portfolios extends Controller
                 Daarbij staat het oefenen en het ongedwongen schilderplezier centraal.
                 Net daarom levert het regelmatig aardige schilderijen op. </p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('pleinair');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getArtDetails($art_id);
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false';
+            $this->view('portfolios/singledetail', $data);
+        }
     }
-    public function summer()
+    public function summer($art_id = '')
     {
-        $art = $this->portfolioModel->getWorksByCollection('summer');
+        if ($art_id == 'index') {$art_id = '';}
         $data = [
             'title' => 'Daanjels paints during the summer season',
             'page' => 'summer',
@@ -135,8 +190,17 @@ class Portfolios extends Controller
                 De Dienst voor Toerisme voorziet in schilderachtige locaties waar liefhebbers elke dinsdag tijdens de zomervakantie komen schilderen of tekenen.
                 Het is een beetje vakantie in eigen land.</p>
                 ',
-            'art' => $art,
         ];
-        $this->view('portfolios/collection', $data);
+        if ($art_id == '') {
+            $art = $this->portfolioModel->getWorksByCollection('summer');
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);    
+        } else {
+            $art = $this->portfolioModel->getWorksByCollection('summer');
+            $data['art'] = $art;
+            $data['art_id'] = $art_id;
+            $data['nav'] = 'false'; // this turns the navigation off, should refactor this later
+            $this->view('portfolios/detail', $data);
+        }
     }
 }

@@ -7,5 +7,7 @@
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/daanjels.css">
 </head>
 <body class="<?= $data['wrap'] ?>-wrap">
-<main id="main">
-<?php require APPROOT . '/views/inc/navigation.php'; ?>
+<?php if (!isset($data['nav'])) { ?>
+    <main id="main">
+    <?php require APPROOT . '/views/inc/navigation.php';
+} ?>

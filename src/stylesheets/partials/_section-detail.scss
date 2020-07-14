@@ -30,9 +30,9 @@ button {
         width: 100%;
         line-height: 2.5rem;
         color: $text-light;
-        button {
+        a, button {
           font-family: $font-sans-serif;
-          font-size: 0.9rem;
+          // font-size: 0.9rem;
           color: $text-light;
           flex-grow: 1;
           padding: 0.25rem 0;
