@@ -1,3 +1,4 @@
+<?php require_once APPROOT.'/resources/portfolio-list.php'; ?>
 <nav class="dropmenu">
     <button class="menu-open" aria-label="open menu" onclick="toggleMenu()" >☰</button></li>
     <ul class="menu menu-wrapper is-closed">

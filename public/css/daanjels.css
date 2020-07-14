@@ -293,45 +293,45 @@ label {
   color: #aa2222;
 }
 
-section {
+main > section {
   padding: 0rem 2em;
 }
-section.pins {
+main > section.pins {
   display: flex;
 }
-section.grid-3 {
+main > section.grid-3 {
   padding: 0.3rem 2rem;
 }
-section.grid-3 figure {
+main > section.grid-3 figure {
   margin-right: -0.25em;
   margin-top: -0.25em;
 }
-section.grid-3 figure.mosaic {
+main > section.grid-3 figure.mosaic {
   display: inline-block;
   width: 33.3%;
 }
-section.grid-5 {
+main > section.grid-5 {
   padding: 0.3rem 2rem;
 }
-section.grid-5 figure {
+main > section.grid-5 figure {
   margin-right: -0.25em;
   margin-top: -0.25em;
 }
-section.grid-5 figure.mosaic {
+main > section.grid-5 figure.mosaic {
   display: inline-block;
   width: 20%;
 }
-section img {
+main > section img {
   width: 100%;
   padding: 1px;
 }
-section img:hover {
+main > section img:hover {
   filter: brightness(90%);
 }
-section div.col {
+main > section div.col {
   flex: 25%;
 }
-section div figure.mosaic {
+main > section div figure.mosaic {
   flex-wrap: wrap;
   margin-bottom: -0.25em;
 }
@@ -463,21 +463,20 @@ footer details p, footer summary {
   main article picture img {
     height: 30rem;
   }
+  main section {
+    padding: 0rem 1rem;
+  }
+  main section.grid-3 {
+    padding: 0.3rem 1rem;
+  }
+  main section.grid-5 {
+    padding: 0.3rem 1rem;
+  }
   main section article h1 {
     padding-top: 2rem;
   }
   main section article p {
     padding: 0.5rem 4rem;
-  }
-
-  section {
-    padding: 0rem 1rem;
-  }
-  section.grid-3 {
-    padding: 0.3rem 1rem;
-  }
-  section.grid-5 {
-    padding: 0.3rem 1rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -500,21 +499,20 @@ footer details p, footer summary {
   main article picture img {
     height: 36rem;
   }
+  main section {
+    padding: 0rem 2rem;
+  }
+  main section.grid-3 {
+    padding: 0.3rem 2rem;
+  }
+  main section.grid-5 {
+    padding: 0.3rem 2rem;
+  }
   main section article h1 {
     padding-top: 2rem;
   }
   main section article p {
     padding: 1rem 4rem;
-  }
-
-  section {
-    padding: 0rem 2rem;
-  }
-  section.grid-3 {
-    padding: 0.3rem 2rem;
-  }
-  section.grid-5 {
-    padding: 0.3rem 2rem;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -537,21 +535,20 @@ footer details p, footer summary {
   main article picture img {
     height: 24rem;
   }
+  main section {
+    padding: 0rem 0rem;
+  }
+  main section.grid-3 {
+    padding: 0.3rem 0rem;
+  }
+  main section.grid-5 {
+    padding: 0.3rem 0rem;
+  }
   main section article h1 {
     padding-top: 2rem;
   }
   main section article p {
     padding: 0.5rem 1rem;
-  }
-
-  section {
-    padding: 0rem 0rem;
-  }
-  section.grid-3 {
-    padding: 0.3rem 0rem;
-  }
-  section.grid-5 {
-    padding: 0.3rem 0rem;
   }
 }
 
