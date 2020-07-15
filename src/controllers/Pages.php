@@ -13,7 +13,7 @@ class Pages extends Controller
     public function index()
     {
         // $example = $this->exampleModel->getExample();
-        $selectedImage = 'media/img/homeCloseUp';
+        $selectedImage = URLROOT.'/media/img/homeCloseUp';
         $alt = 'Detail van ogen';
         $quote = $this->pageModel->getQuote();
 
@@ -37,10 +37,10 @@ class Pages extends Controller
                 </article>
                 <article>
                     <picture>
-                        <source media="(max-width: 400px)" srcset="media/img/homePond-300w.jpg">
-                        <source media="(max-width: 700px)" srcset="media/img/homePond-600w.jpg">
-                        <source media="(max-width: 1000px)" srcset="media/img/homePond-900w.jpg">
-                        <img src="media/img/homePond.jpg" alt="Detail vijver"/>
+                        <source media="(max-width: 400px)" srcset="'.URLROOT.'/media/img/homePond-300w.jpg">
+                        <source media="(max-width: 700px)" srcset="'.URLROOT.'/media/img/homePond-600w.jpg">
+                        <source media="(max-width: 1000px)" srcset="'.URLROOT.'/media/img/homePond-900w.jpg">
+                        <img src="'.URLROOT.'/media/img/homePond.jpg" alt="Detail vijver"/>
                     </picture>
                     <h1>Schilderen</h1>
                     <p>Om tot rust te komen schildert Daanjels soms landschappen.
@@ -51,10 +51,10 @@ class Pages extends Controller
                 </article>
                 <article>
                     <picture>
-                        <source media="(max-width: 400px)" srcset="media/img/homeStable-300w.jpg">
-                        <source media="(max-width: 700px)" srcset="media/img/homeStable-600w.jpg">
-                        <source media="(max-width: 1000px)" srcset="media/img/homeStable-900w.jpg">
-                        <img src="media/img/homeStable.jpg" alt="Detail stal"/>
+                        <source media="(max-width: 400px)" srcset="'.URLROOT.'/media/img/homeStable-300w.jpg">
+                        <source media="(max-width: 700px)" srcset="'.URLROOT.'/media/img/homeStable-600w.jpg">
+                        <source media="(max-width: 1000px)" srcset="'.URLROOT.'/media/img/homeStable-900w.jpg">
+                        <img src="'.URLROOT.'/media/img/homeStable.jpg" alt="Detail stal"/>
                     </picture>
                     <h1>Tekenen</h1>
                     <p>Tussen al het andere leven door, tekent Daanjels om voortdurend bij te leren.
@@ -80,7 +80,7 @@ class Pages extends Controller
             'headline' => 'Opkomst van een portretschilder',
             'content' => '
                 <p>
-                    <img src="media/img/Atelier.jpg" alt="Atelier buiten" class="inline-left">
+                    <img src="'.URLROOT.'/media/img/Atelier.jpg" alt="Atelier buiten" class="inline-left">
                     Tekenen kan iedereen. We hebben allemaal getekend nog voor we leerden schrijven.
                     En hoe zalig was het niet om met kleuren aan de slag te gaan.
                     Ik ben het nooit vergeten.</p>
@@ -90,7 +90,7 @@ class Pages extends Controller
                 <p>Gek genoeg heeft het daarna twintig jaar geduurd voor ik de juiste beslissing heb genomen om me daar verder in te verdiepen.</p>
                 <h4>Kreateur</h4>
                 <p>
-                    <img src="media/img/Kat.jpg" alt="Kat" class="inline-right">
+                    <img src="'.URLROOT.'/media/img/Kat.jpg" alt="Kat" class="inline-right">
                     Dankzij de juiste begeleiding en veel oefening zit ik nu op een punt om met mijn werk naar buiten te komen.
                     Al heb ik de laatste jaren niets achtergehouden.</p>
                 <p>Op mijn blog <em><a href="https://www.wim-daniels.be">Kreateur </a></em>heb ik tijdens de opleiding in Slac een dagboek bijgehouden.
@@ -98,14 +98,14 @@ class Pages extends Controller
                     Tussen de regels door krijg je veel tips die nuttig kunnen zijn voor aspirant schilders.</p>
                 <h4>Plein air</h4>
                     <p>
-                    <img src="media/img/Geertrui.jpg" alt="Geertrui" class="inline-left">
+                    <img src="'.URLROOT.'/media/img/Geertrui.jpg" alt="Geertrui" class="inline-left">
                     Naast het werk met olieverf heb ik in mijn vrije tijd stevig geoefend op aquarel.
                     Via de <em>Zomerschilderdagen </em>van Heist-op-den-Berg ben ik beginnen schilderen in open lucht — en plein air zoals dat heet - waarbij waterverf beduidend handiger is.</p>
                 <p>Ondertussen ga ik ook regelmatig met enkele vrienden van de academie buiten schilderen.
                     Of ik doe mee met de <em>Urban sketchers </em>die in hun schetsboeken het leven in de steden capteren.</p>
                 <h4>Portret</h4>
                 <p>
-                    <img src="media/img/Begijnhof.jpg" alt="Begijnhof" class="inline-right">
+                    <img src="'.URLROOT.'/media/img/Begijnhof.jpg" alt="Begijnhof" class="inline-right">
                     Na al dat oefenen en proeven gaat mijn voorliefde uit naar de portretkunst.
                     Om in een portret naast de gelijkenis ook sfeer en gevoel te leggen, dat blijft de ware uitdaging.
                     Je moet dan balanceren tussen precisie en spontaniteit.</p>

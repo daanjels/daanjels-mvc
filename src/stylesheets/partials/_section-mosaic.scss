@@ -28,9 +28,9 @@ main>section {
     img {
         width : 100%;
         padding: 1px;
-        &:hover {
-            filter: brightness(90%);
-        }
+    }
+    a img:hover {
+        filter: brightness(90%);
     }
     div.col {
         flex: 25%;

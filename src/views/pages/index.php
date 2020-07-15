@@ -3,9 +3,9 @@ require APPROOT . '/views/inc/header.php';
     echo $data['content'];
 ?>
     <blockquote cite="">
-        <img class="left" src="<?= URLROOT ?>/public/assets/patterns/slquo.svg" alt="Left quote">
+        <img class="left" src="<?= URLROOT ?>/assets/patterns/slquo.svg" alt="Left quote">
         <?= $data['quote']->quote ?>
-        <img class="right" src="<?= URLROOT ?>/public/assets/patterns/srquo.svg" alt="Right quote">
+        <img class="right" src="<?= URLROOT ?>/assets/patterns/srquo.svg" alt="Right quote">
         <p><?= $data['quote']->author ?></p>
         <cite>( <?= $data['quote']->life ?> )</cite>
     </blockquote>

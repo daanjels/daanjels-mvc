@@ -1,31 +1,31 @@
 @font-face {
   font-family: Nunito;
-  src: url(/daanjels-mvc/public/assets/fonts/Nunito-ExtraLight.ttf);
+  src: url(../assets/fonts/Nunito-ExtraLight.ttf);
   font-weight: 100;
 }
 @font-face {
   font-family: Nunito;
-  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Light.ttf);
+  src: url(../assets/fonts/Nunito-Light.ttf);
   font-weight: 200;
 }
 @font-face {
   font-family: Nunito;
-  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Regular.ttf);
+  src: url(../assets/fonts/Nunito-Regular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: Nunito;
-  src: url(/daanjels-mvc/public/assets/fonts/Nunito-Bold.ttf);
+  src: url(../assets/fonts/Nunito-Bold.ttf);
   font-weight: 700;
 }
 @font-face {
   font-family: Merriweather;
-  src: url(/daanjels-mvc/public/assets/fonts/Merriweather-Light.ttf);
+  src: url(../assets/fonts/Merriweather-Light.ttf);
   font-weight: 200;
 }
 @font-face {
   font-family: Merriweather;
-  src: url(/daanjels-mvc/public/assets/fonts/Merriweather-LightItalic.ttf);
+  src: url(../assets/fonts/Merriweather-LightItalic.ttf);
   font-weight: 200;
   font-style: italic;
 }
@@ -39,13 +39,13 @@ html {
 }
 
 body.carton-wrap {
-  background-image: url(/daanjels-mvc/public/assets/patterns/halftone.png);
+  background-image: url(../assets/patterns/halftone.png);
 }
 body.canvas-wrap {
-  background-image: url(/daanjels-mvc/public/assets/patterns/white_wall.png);
+  background-image: url(../assets/patterns/white_wall.png);
 }
 body.paper-wrap {
-  background-image: url(/daanjels-mvc/public/assets/patterns/ep_naturalwhite.png);
+  background-image: url(../assets/patterns/ep_naturalwhite.png);
 }
 
 a {
@@ -329,7 +329,7 @@ main > section img {
   width: 100%;
   padding: 1px;
 }
-main > section img:hover {
+main > section a img:hover {
   filter: brightness(90%);
 }
 main > section div.col {
