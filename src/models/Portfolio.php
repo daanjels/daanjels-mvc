@@ -8,6 +8,15 @@ class Portfolio
         $this->db = new Database;
     }
 
+    public function getCollectionDetails($collection)
+    {
+        $this->db->query('SELECT name as page, description as title, headline, introduction, wrap, mosaic FROM portfolio WHERE name = :collection');
+        $this->db->bind(':collection', $collection);
+        
+        $details = $this->db->single();
+        return $details;
+    }
+
     public function getWorksByCollection($collection)
     {
         require APPROOT.'/resources/data.php';

@@ -2,9 +2,10 @@
 <header>
     <article>
         <h1><?= $data['headline']; ?></h1>
-        <?= $data['intro']; ?>
+        <p><?= $data['introduction']; ?></p>
     </article>
 </header>
+
 <section class="<?= $data['mosaic'] ?>">
 <?php 
 $works = $data['art'];
