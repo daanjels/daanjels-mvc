@@ -6,10 +6,9 @@ $art = $data['art'];
 <section id="details">
   <figure>
     <nav>
-      <a id="prev" href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['prev'] ?>">&lt;</a>
-      &nbsp;[ <?= $art['count'] ?> of <?= $art['total'] ?> ]&nbsp;
-      <a id="next" href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['next'] ?>">&gt;</a>
-      <a id="closedetail" href="<?= URLROOT.'/portfolios/'.$data['page'] ?>">×</a>
+      <a id="prev" href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['prev'] ?>"></a>
+      &nbsp;[ <?= $art['count'] ?> van <?= $art['total'] ?> ]&nbsp;
+      <a id="next" href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['next'] ?>"></a>
     </nav>
     <img src="<?= MEDIAROOT.$art['path'] ?>" alt="Painting <?= $data['page'] ?> <?= $art['title'] ?>">
     <figcaption>
@@ -17,6 +16,7 @@ $art = $data['art'];
       <p><?= $art['caption'] ?></p>
     </figcaption>
   </figure>
+  <a id="closedetail" class="<?= $data['mosaic'] ?>" href="<?= URLROOT.'/portfolios/'.$data['page'] ?>">&nbsp;</a><!-- × -->
 </section>
 
 <script>detailKeys();</script>

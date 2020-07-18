@@ -13,21 +13,20 @@ function toggleMenu() {
 function detailKeys() {
   window.onkeydown = keyPressed;
   function keyPressed(e) {
-    if (e.keyCode === 27) {
-      // Escape
-      console.log('Escape');
+    if (e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40) {
+      // console.log('Escape, up or down');
       window.location.href='index';
       return;
     }
     if (e.keyCode === 37) {
-      // Left arrow
+      // console.log('Left arrow');
       var prev = document.getElementById('prev');
       url = prev.getAttribute('href');
       window.location.href=url;
       return;
     }
     if (e.keyCode === 39) {
-      // Right arrow
+      // console.log('Right arrow');
       var next = document.getElementById('next');
       url = next.getAttribute('href');
       window.location.href=url;

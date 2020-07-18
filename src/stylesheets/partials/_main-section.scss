@@ -61,8 +61,10 @@ main {
                 padding: 0.5rem 6rem;
             }
             img {
+                display: block;
                 width: 100%;
-                height: auto;
+                margin-bottom: 0.5rem;
+                // height: auto;
             }
         }
     }

@@ -3,8 +3,12 @@ main>section {
     &.pins {
         display: flex;
     }
+    img {
+        width : 100%;
+        padding: 1px;
+    }
     &.grid-3 {
-        padding: 0.3rem 2rem;
+        padding: 0.5rem 2rem;
         figure {
             margin-right: -0.25em;
             margin-top: -0.25em;
@@ -13,9 +17,12 @@ main>section {
                 width: 33.3%;
             }
         }
+        img {
+            padding: 5px;
+        }
     }
     &.grid-5 {
-        padding: 0.3rem 2rem;
+        padding: 0.5rem 2rem;
         figure {
             margin-right: -0.25em;
             margin-top: -0.25em;
@@ -24,10 +31,9 @@ main>section {
                 width: 20%;
             }
         }
-    }
-    img {
-        width : 100%;
-        padding: 1px;
+        img {
+            padding: 5px;
+        }
     }
     a img:hover {
         filter: brightness(90%);

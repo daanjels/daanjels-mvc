@@ -50,6 +50,7 @@ body.paper-wrap {
 
 a {
   text-decoration: none;
+  color: #884422;
 }
 
 nav {
@@ -62,7 +63,7 @@ nav {
   letter-spacing: 0.1rem;
 }
 nav.topmenu {
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 nav ul {
   padding: 0;
@@ -87,7 +88,7 @@ nav ul li em {
   font-weight: 400;
 }
 nav ul li a:hover {
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 nav ul.is-closed {
   display: none;
@@ -100,7 +101,7 @@ nav.dropmenu {
 nav.dropmenu ul li {
   display: block;
   text-align: right;
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 nav.dropmenu ul li:first-of-type {
   padding-top: 40px;
@@ -121,17 +122,17 @@ nav.dropmenu button {
   width: 100%;
   min-width: 3em;
   border: none;
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 nav.dropmenu button:hover {
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 nav.dropmenu button.is-opened {
   display: none;
 }
 
 main {
-  background-color: rgba(30, 30, 20, 0.15);
+  background-color: rgba(30, 30, 20, 0.1);
   padding-top: 40px;
 }
 main article h1, main article h2, main article h3, main article h4, main article h5, main article p {
@@ -191,14 +192,15 @@ main section article p {
   padding: 0.5rem 6rem;
 }
 main section article img {
+  display: block;
   width: 100%;
-  height: auto;
+  margin-bottom: 0.5rem;
 }
 
 main header {
   color: #55554e;
   padding: 2rem 6rem;
-  background-color: rgba(30, 30, 20, 0.15);
+  background-color: rgba(30, 30, 20, 0.1);
 }
 main header article h1 {
   padding-top: 1rem;
@@ -288,7 +290,7 @@ input[type=submit] {
   color: #eeeeea;
 }
 input[type=submit]:hover {
-  background-color: rgba(30, 30, 20, 0.75);
+  background-color: rgba(30, 30, 20, 0.7);
 }
 
 label {
@@ -303,8 +305,12 @@ main > section {
 main > section.pins {
   display: flex;
 }
+main > section img {
+  width: 100%;
+  padding: 1px;
+}
 main > section.grid-3 {
-  padding: 0.3rem 2rem;
+  padding: 0.5rem 2rem;
 }
 main > section.grid-3 figure {
   margin-right: -0.25em;
@@ -314,8 +320,11 @@ main > section.grid-3 figure.mosaic {
   display: inline-block;
   width: 33.3%;
 }
+main > section.grid-3 img {
+  padding: 5px;
+}
 main > section.grid-5 {
-  padding: 0.3rem 2rem;
+  padding: 0.5rem 2rem;
 }
 main > section.grid-5 figure {
   margin-right: -0.25em;
@@ -325,9 +334,8 @@ main > section.grid-5 figure.mosaic {
   display: inline-block;
   width: 20%;
 }
-main > section img {
-  width: 100%;
-  padding: 1px;
+main > section.grid-5 img {
+  padding: 5px;
 }
 main > section a img:hover {
   filter: brightness(90%);
@@ -352,6 +360,27 @@ button {
   background-color: rgba(20, 0, 0, 0.1);
   text-align: center;
 }
+#details #closedetail {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  background-image: url(../assets/patterns/mosaic.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position-x: 0.5rem;
+  background-position-y: 0.5rem;
+  line-height: 2rem;
+  padding: 0.25rem 0;
+  background-color: rgba(30, 30, 20, 0.4);
+}
+#details #closedetail.pins {
+  background-image: url(../assets/patterns/mosaic-pins.svg);
+}
+#details #closedetail:hover {
+  background-color: rgba(30, 30, 20, 0.7);
+}
 #details figure {
   width: max-content;
   margin-left: auto;
@@ -372,25 +401,30 @@ button {
   top: 0;
   display: flex;
   width: 100%;
+  height: auto;
   line-height: 2.5rem;
   color: #eeeeea;
+  background-color: rgba(30, 30, 20, 0.1);
 }
 #details figure nav a, #details figure nav button {
   font-family: "Nunito", Arial, sans-serif;
   color: #eeeeea;
   flex-grow: 1;
-  padding: 0.25rem 0;
+  line-height: 2rem;
+  padding: 0.25rem 1rem;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
 }
 #details figure nav a:hover, #details figure nav button:hover {
-  background-color: rgba(30, 30, 20, 0.5);
+  background-color: rgba(30, 30, 20, 0.4);
 }
-#details figure nav #prev, #details figure nav #next {
-  font-size: 1.5rem;
+#details figure nav a#prev {
+  background-image: url(../assets/patterns/arrowl.svg);
+  background-position: 95%;
 }
-#details figure nav #closedetail {
-  font-size: 1.5rem;
-  flex-grow: 0;
-  width: 2rem;
+#details figure nav a#next {
+  background-image: url(../assets/patterns/arrowr.svg);
+  background-position: 5%;
 }
 #details figure figcaption {
   position: absolute;
@@ -470,10 +504,10 @@ footer details p, footer summary {
     padding: 0rem 1rem;
   }
   main section.grid-3 {
-    padding: 0.3rem 1rem;
+    padding: 8px 1rem;
   }
   main section.grid-5 {
-    padding: 0.3rem 1rem;
+    padding: 8px 1rem;
   }
   main section article h1 {
     padding-top: 2rem;
@@ -506,10 +540,10 @@ footer details p, footer summary {
     padding: 0rem 2rem;
   }
   main section.grid-3 {
-    padding: 0.3rem 2rem;
+    padding: 0.4rem 2rem;
   }
   main section.grid-5 {
-    padding: 0.3rem 2rem;
+    padding: 0.4rem 2rem;
   }
   main section article h1 {
     padding-top: 2rem;
@@ -521,6 +555,20 @@ footer details p, footer summary {
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
+  }
+
+  nav {
+    letter-spacing: 0;
+  }
+  nav ul li a, nav ul li a:visited, nav ul li em {
+    padding: 11px 8px;
+  }
+  nav ul li a.sitename, nav ul li a:visited.sitename, nav ul li em.sitename {
+    letter-spacing: 0.1rem;
+    padding-left: 14px;
+  }
+  nav ul.is-closed {
+    display: none;
   }
 
   main header {
@@ -539,13 +587,17 @@ footer details p, footer summary {
     height: 24rem;
   }
   main section {
-    padding: 0rem 0rem;
+    padding: 0 0;
   }
   main section.grid-3 {
-    padding: 0.3rem 0rem;
+    padding: 6px 3px;
   }
   main section.grid-5 {
-    padding: 0.3rem 0rem;
+    padding: 6px 3px;
+  }
+  main section.grid-5 img {
+    width: 100%;
+    padding: 3px;
   }
   main section article h1 {
     padding-top: 2rem;

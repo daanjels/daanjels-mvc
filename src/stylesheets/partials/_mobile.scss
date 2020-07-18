@@ -25,10 +25,10 @@
         section {
             padding: 0rem 1rem;
             &.grid-3 {
-                padding: 0.3rem 1rem;
+                padding: 8px 1rem;
             }
             &.grid-5 {
-                padding: 0.3rem 1rem;
+                padding: 8px 1rem;
             }
             article {
                 h1 {
@@ -69,10 +69,10 @@
         section {
             padding: 0rem 2rem;
             &.grid-3 {
-                padding: 0.3rem 2rem;
+                padding: 0.4rem 2rem;
             }
             &.grid-5 {
-                padding: 0.3rem 2rem;
+                padding: 0.4rem 2rem;
             }
             article {
                 h1 {
@@ -89,6 +89,23 @@
 @media only screen and (max-width: 600px) {
     html {
         font-size: 14px;
+    }
+    nav {
+        letter-spacing: 0;
+        ul {
+            li {
+                a, a:visited, em {
+                    padding: 11px 8px;
+                    &.sitename {
+                        letter-spacing: 0.1rem;
+                        padding-left: 14px;
+                    }
+                }
+            }
+            &.is-closed {
+                display: none;
+            }
+        }      
     }
     main {
         header {
@@ -111,12 +128,16 @@
             }    
         }
         section {
-            padding: 0rem 0rem;
+            padding: 0 0;
             &.grid-3 {
-                padding: 0.3rem 0rem;
+                padding: 6px 3px;
             }
             &.grid-5 {
-                padding: 0.3rem 0rem;
+                padding: 6px 3px;
+                img {
+                    width : 100%;
+                    padding: 3px;
+                }
             }
             article {
                 h1 {

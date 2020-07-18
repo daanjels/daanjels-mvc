@@ -9,6 +9,29 @@ button {
     font-family: $font-sans-serif;
     background-color: rgba(20, 0, 0, 0.1);
     text-align: center;
+    #closedetail {
+      position: fixed;
+      top: 0;
+      right: 0;
+      font-size: 1.5rem;
+      // flex-grow: 0;
+      width: 2.5rem;
+      background-image: url(#{$assets}/patterns/mosaic.svg);
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      background-position-x: 0.5rem;
+      background-position-y: 0.5rem;
+      line-height: 2rem;
+      padding: 0.25rem 0;
+      background-color: $back-gray;
+      &.pins {
+        background-image: url(#{$assets}/patterns/mosaic-pins.svg);
+      }
+      &:hover {
+        background-color: $back-dark;
+      }
+    }
+
     figure {
       width: max-content;
       margin-left: auto;
@@ -28,25 +51,30 @@ button {
         top: 0;
         display: flex;
         width: 100%;
+        height: auto;
         line-height: 2.5rem;
         color: $text-light;
+        background-color: $back-shade;
         a, button {
           font-family: $font-sans-serif;
           // font-size: 0.9rem;
           color: $text-light;
           flex-grow: 1;
-          padding: 0.25rem 0;
+          line-height: 2rem;
+          padding: 0.25rem 1rem;
+          background-repeat: no-repeat;
+          background-size: 1.25rem;
           &:hover {
             background-color: $back-gray;
           }
         }
-        #prev, #next {
-          font-size: 1.5rem;
+        a#prev{
+          background-image: url(#{$assets}/patterns/arrowl.svg);
+          background-position: 95%;
         }
-        #closedetail {
-          font-size: 1.5rem;
-          flex-grow: 0;
-          width: 2rem;
+        a#next {
+          background-image: url(#{$assets}/patterns/arrowr.svg);
+          background-position: 5%;
         }
       }
       figcaption {
