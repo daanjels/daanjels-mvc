@@ -10,80 +10,79 @@ class Portfolios extends Controller
     {
         $portfolio = $this->portfolioModel->getCollectionDetails($collection);
         $data = (array) $portfolio;
-        $art = $this->portfolioModel->getWorksByCollection($collection);
+        $art = $this->portfolioModel->getCollection($collection);
         $data['art'] = $art;
         $this->view('portfolios/collection', $data);
     }
 
-    public function showArtwork($art_id, $collection)
+    public function showArtwork($name, $collection)
     {
         $portfolio = $this->portfolioModel->getCollectionDetails($collection);
         $data = (array) $portfolio;
-        $art = $this->portfolioModel->getArtDetails($art_id);
+        $art = $this->portfolioModel->getArtDetails($name);
         $data['art'] = $art;
-        $data['art_id'] = $art_id; // do we need to pass this??
+        $data['title'] = $data['art']['title'].' - '.$data['art']['caption'];
         $data['nav'] = 'false'; // this turns the navigation off, should refactor this later
         $this->view('portfolios/singledetail', $data);
-
     }
     public function index()
     {
         redirect('portfolios/portrait');
     }
-    public function portrait($art_id = '')
+    public function portrait($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('portrait');
         } else {
-            $this->showArtwork($art_id, 'portrait');
+            $this->showArtwork($name, 'portrait');
         }
     }
-    public function landscape($art_id = '')
+    public function landscape($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('landscape');
         } else {
-            $this->showArtwork($art_id, 'landscape');
+            $this->showArtwork($name, 'landscape');
         }
     }
-    public function bird($art_id = '')
+    public function bird($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('bird');
         } else {
-            $this->showArtwork($art_id, 'bird');
+            $this->showArtwork($name, 'bird');
         }
     }
-    public function figure($art_id = '')
+    public function figure($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('figure');
         } else {
-            $this->showArtwork($art_id, 'figure');
+            $this->showArtwork($name, 'figure');
         }
     }
-    public function figurestudy($art_id = '')
+    public function figurestudy($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('figurestudy');
         } else {
-            $this->showArtwork($art_id, 'figurestudy');
+            $this->showArtwork($name, 'figurestudy');
         }
     }
-    public function pleinair($art_id = '')
+    public function pleinair($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('pleinair');
         } else {
-            $this->showArtwork($art_id, 'pleinair');
+            $this->showArtwork($name, 'pleinair');
         }
     }
-    public function summer($art_id = '')
+    public function summer($name = '')
     {
-        if ($art_id == 'index' || $art_id == '') {
+        if ($name == 'index' || $name == '') {
             $this->showCollection('summer');
         } else {
-            $this->showArtwork($art_id, 'summer');
+            $this->showArtwork($name, 'summer');
         }
     }
 }

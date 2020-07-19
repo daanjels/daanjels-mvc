@@ -9,10 +9,10 @@
 <section class="<?= $data['mosaic'] ?>">
 <?php 
 $works = $data['art'];
-if ($data['mosaic'] == 'pins') {
+if ($data['mosaic'] == 'pins') { // for the pins, build four columns
     $counter = 1;
     $cols = array('col 1' => [], 'col 2' => [], 'col 3' => [], 'col 4' => []);
-    foreach ($works as $key => $art) {
+    foreach ($works as $key => $art) { // distribute the images over the columns
       if ( ($counter)%4 == 1) {
         $cols['col 1'][$key] = $art; 
       } else if ( ($counter)%4 == 2) {
@@ -24,23 +24,25 @@ if ($data['mosaic'] == 'pins') {
       }
       $counter++;
     }
-    foreach($cols as $col => $list) { ?>
+    foreach($cols as $col => $list) { // iterate through the four columns to fill them
+    ?> 
     <div class="col" id="<?= $col ?>">
-      <?php foreach($list as $key => $value) { ?>
+      <?php foreach($list as $key => $value) { // go through the list of artworks per column
+        ?>
         <figure class="mosaic">
-          <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$key ?>">
+          <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$value['name'] ?>">
             <img src="<?= MEDIAROOT.$value['path']; ?>" alt="Painting <?= $data['page'].' '.$value['title']; ?>"/>
           </a>
         </figure>
       <?php } ?>
     </div>
     <?php }
-  } else {
+  } else { // for grids just loop through all the images
     $count = 0;
     foreach($works as $key => $art) {
       $count++; ?>
       <figure class="mosaic">
-        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$key ?>">
+        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['name'] ?>">
           <img src="<?= MEDIAROOT.$art['path']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
         </a>
       </figure><?php }
