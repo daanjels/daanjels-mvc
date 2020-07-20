@@ -12,8 +12,7 @@ class Core
 
     public function __construct()
     {
-        $url = $this->getURL();
-        // print_r($url); // print the array
+        $url = $this->getURL(); // get the part that comes after  the
 
         // if there is nothing extra in the url, add Pages in front to turn it into a method
         if (empty($url)) {
@@ -37,26 +36,27 @@ class Core
         // require the controller class
         require_once '../src/controllers/' . $this->currentController . '.php';
 
-        // instantiate controller class
-        $this->currentController = new $this->currentController;
-
         // check for second part in url
         if(isset($url[1])) {
             // check if the method exists
             if (method_exists($this->currentController, $url[1])) {
-                $this->currentMethod = $url[1];
-                // unset method
-                unset($url[1]);
+                    $this->currentMethod = $url[1];
+                    // unset the method in the url
+                    unset($url[1]);
             }
-        }
-
+            // when there is no specific method, index will be used
+            // in this case we do not remove the 'method' from the url, keeping it as a parameter for the index method
+            // this means we can use index as a default method which uses the url parameters as arguments
+            }
         // get params: add the values of the url in the params
         $this->params = $url ? array_values($url) : [];
+
+        // instantiate controller class
+        $this->currentController = new $this->currentController;
 
         // callback with array of params
         call_user_func_array([$this->currentController,
             $this->currentMethod], $this->params);
-        
     }
     
     public function getURL()

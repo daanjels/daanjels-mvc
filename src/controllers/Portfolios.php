@@ -6,83 +6,35 @@ class Portfolios extends Controller
         $this->portfolioModel = $this->model('Portfolio'); // load the user model
     }
 
-    public function showcollection($collection)
+    public function showCollection($collection, $name = null)
     {
+        if (!$this->portfolioModel->getCollectionDetails($collection)) {
+            // if the collection does not exist use the default
+            // this can only happen when the url is typed in
+            // no need to redirect to an error page
+            $collection = 'portrait';
+        }
         $portfolio = $this->portfolioModel->getCollectionDetails($collection);
         $data = (array) $portfolio;
-        $art = $this->portfolioModel->getCollection($collection);
-        $data['art'] = $art;
-        $this->view('portfolios/collection', $data);
+        if ($name == null) { // if no $name is provided, show the full collection
+            $art = $this->portfolioModel->getCollection($collection);
+            $data['art'] = $art;
+            $this->view('portfolios/collection', $data);
+        } else { // if $name is given, show that artwork with details
+            $art = $this->portfolioModel->getArtDetails($name);
+            $data['art'] = $art;
+            $data['title'] = $data['art']['title'].' - '.$data['art']['caption'];
+            $data['nav'] = 'false'; // this turns the navigation off, should refactor this later
+            $this->view('portfolios/singledetail', $data);
+        }
     }
 
-    public function showArtwork($name, $collection)
+    public function index($collection = null, $artwork = null)
     {
-        $portfolio = $this->portfolioModel->getCollectionDetails($collection);
-        $data = (array) $portfolio;
-        $art = $this->portfolioModel->getArtDetails($name);
-        $data['art'] = $art;
-        $data['title'] = $data['art']['title'].' - '.$data['art']['caption'];
-        $data['nav'] = 'false'; // this turns the navigation off, should refactor this later
-        $this->view('portfolios/singledetail', $data);
-    }
-    public function index()
-    {
-        redirect('portfolios/portrait');
-    }
-    public function portrait($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('portrait');
-        } else {
-            $this->showArtwork($name, 'portrait');
+        // the index is the default method and uses the second parameter in the url as the first argument ($collection)
+        if ($collection == null) {
+            $this->showCollection('portrait'); // if no collection is provided show the default
         }
-    }
-    public function landscape($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('landscape');
-        } else {
-            $this->showArtwork($name, 'landscape');
-        }
-    }
-    public function bird($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('bird');
-        } else {
-            $this->showArtwork($name, 'bird');
-        }
-    }
-    public function figure($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('figure');
-        } else {
-            $this->showArtwork($name, 'figure');
-        }
-    }
-    public function figurestudy($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('figurestudy');
-        } else {
-            $this->showArtwork($name, 'figurestudy');
-        }
-    }
-    public function pleinair($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('pleinair');
-        } else {
-            $this->showArtwork($name, 'pleinair');
-        }
-    }
-    public function summer($name = '')
-    {
-        if ($name == 'index' || $name == '') {
-            $this->showCollection('summer');
-        } else {
-            $this->showArtwork($name, 'summer');
-        }
+        $this->showCollection($collection, $artwork); // if $artwork is null show the whole collection
     }
 }
