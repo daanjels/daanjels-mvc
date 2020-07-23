@@ -1,3 +1,13 @@
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|ttf)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     # make sure that anything is referred to the public folder

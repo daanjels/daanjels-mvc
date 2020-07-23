@@ -129,6 +129,22 @@ class Pages extends Controller
     }
     public function design()
     {
-        $this->view('pages/design');
+        $data = [
+            'title'=>'Design Daanjels',
+            'page' => 'design',
+            'menu' => 'Design',
+            'wrap' => 'paper',
+        ];
+        $this->view('pages/design', $data);
+    }
+    public function sitemap()
+    {
+        $data = [
+            'title'=>'Sitemap Daanjels',
+            'page' => 'sitemap',
+            'menu' => 'Sitemap',
+            'wrap' => 'paper',
+        ];
+        $this->view('pages/sitemap', $data);
     }
 }

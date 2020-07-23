@@ -2,32 +2,38 @@
   font-family: Nunito;
   src: url(../assets/fonts/Nunito-ExtraLight.ttf);
   font-weight: 100;
+  font-display: swap;
 }
 @font-face {
   font-family: Nunito;
   src: url(../assets/fonts/Nunito-Light.ttf);
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: Nunito;
   src: url(../assets/fonts/Nunito-Regular.ttf);
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: Nunito;
   src: url(../assets/fonts/Nunito-Bold.ttf);
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: Merriweather;
   src: url(../assets/fonts/Merriweather-Light.ttf);
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: Merriweather;
   src: url(../assets/fonts/Merriweather-LightItalic.ttf);
   font-weight: 200;
   font-style: italic;
+  font-display: swap;
 }
 * {
   margin: 0;
