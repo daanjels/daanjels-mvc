@@ -28,24 +28,30 @@ if ($data['mosaic'] == 'pins') { // for the pins, build four columns
     ?> 
     <div class="col" id="<?= $col ?>">
       <?php foreach($list as $key => $value) { // go through the list of artworks per column
+      $dir = pathinfo(MEDIAROOT.$value['path'], PATHINFO_DIRNAME);
+      $filename = basename(MEDIAROOT.$value['path'], ".jpg");
+      $selectedImage = $dir."/".$filename;
         ?>
-        <figure class="mosaic">
-          <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$value['name'] ?>">
-            <img src="<?= MEDIAROOT.$value['path']; ?>" alt="Painting <?= $data['page'].' '.$value['title']; ?>"/>
-          </a>
-        </figure>
+        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$value['name'] ?>">
+          <figure class="mosaic">
+            <?php echo insertsmallPicture($selectedImage, "Painting ".$data['page']." ".$value['title']); ?>
+          </figure>
+        </a>
       <?php } ?>
     </div>
     <?php }
   } else { // for grids just loop through all the images
     $count = 0;
     foreach($works as $key => $art) {
+      $dir = pathinfo(MEDIAROOT.$art['path'], PATHINFO_DIRNAME);
+      $filename = basename(MEDIAROOT.$art['path'], ".jpg");
+      $selectedImage = $dir."/".$filename;
       $count++; ?>
-      <figure class="mosaic">
-        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['name'] ?>">
-          <img src="<?= MEDIAROOT.$art['path']; ?>" alt="<?= $data['page'].' '.$art['title']; ?>">
-        </a>
-      </figure><?php }
+      <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['name'] ?>">
+        <figure class="mosaic">
+        <?php echo insertsmallPicture($selectedImage, "Painting ".$data['page']." ".$art['title']); ?>
+        </figure>
+      </a><?php }
   } ?>
 </section>
 <?php 

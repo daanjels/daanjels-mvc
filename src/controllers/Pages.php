@@ -13,8 +13,12 @@ class Pages extends Controller
     public function index()
     {
         // $example = $this->exampleModel->getExample();
-        $selectedImage = URLROOT.'/media/img/homeCloseUp';
-        $alt = 'Detail van ogen';
+        $imagePortrait = URLROOT.'/media/img/homeCloseUp';
+        $altPortrait = 'Detail van ogen';
+        $imagePainting = URLROOT.'/media/img/homePond';
+        $altPainting = 'Detail vijver';
+        $imageDrawing = URLROOT.'/media/img/homeStable';
+        $altDrawing = 'Detail stal';
         $quote = $this->pageModel->getQuote();
 
         $data = [
@@ -23,39 +27,25 @@ class Pages extends Controller
             'menu' => 'da:njəls',
             'wrap' => 'canvas',
             'content' => '
-                <article>
-                    <picture>
-                        <source media="(max-width: 400px)" srcset="'.$selectedImage.'-300w.jpg">
-                        <source media="(max-width: 700px)" srcset="'.$selectedImage.'-600w.jpg">
-                        <source media="(max-width: 1000px)" srcset="'.$selectedImage.'-900w.jpg">
-                        <img src="'.$selectedImage.'.jpg" alt="'.$alt.'"/>
-                    </picture>
-                    <h1>Portret</h1>
+                <article>' . 
+                    insertPicture($imagePortrait, $altPortrait) .
+                    '<h1>Portret</h1>
                     <p>Daanjels is kunstschilder, tekenaar en liefhebber van Argentijnse tango.
                     Hij is gepassioneerd door het weergeven van iemands persoonlijkheid.
                     Als je graag een geschilderd portret laat maken van iemand die je lief is, neem gerust <a href="contact">contact </a>op!</p>
                 </article>
-                <article>
-                    <picture>
-                        <source media="(max-width: 400px)" srcset="'.URLROOT.'/media/img/homePond-300w.jpg">
-                        <source media="(max-width: 700px)" srcset="'.URLROOT.'/media/img/homePond-600w.jpg">
-                        <source media="(max-width: 1000px)" srcset="'.URLROOT.'/media/img/homePond-900w.jpg">
-                        <img src="'.URLROOT.'/media/img/homePond.jpg" alt="Detail vijver"/>
-                    </picture>
-                    <h1>Schilderen</h1>
+                <article>' . 
+                    insertPicture($imagePainting, $altPainting) .
+                    '<h1>Schilderen</h1>
                     <p>Om tot rust te komen schildert Daanjels soms landschappen.
                     Daarbij werkt hij graag ‘en plein air’.
                     Sporadische deelnames aan modelsessies vergen meer energie, ze houden hem scherp.
                     Werp gerust een blik op zijn werk.
                     Alle schilderijen en tekeningen zijn te koop.</p>
                 </article>
-                <article>
-                    <picture>
-                        <source media="(max-width: 400px)" srcset="'.URLROOT.'/media/img/homeStable-300w.jpg">
-                        <source media="(max-width: 700px)" srcset="'.URLROOT.'/media/img/homeStable-600w.jpg">
-                        <source media="(max-width: 1000px)" srcset="'.URLROOT.'/media/img/homeStable-900w.jpg">
-                        <img src="'.URLROOT.'/media/img/homeStable.jpg" alt="Detail stal"/>
-                    </picture>
+                <article>' . 
+                    insertPicture($imageDrawing, $altDrawing) .
+                    '</picture>
                     <h1>Tekenen</h1>
                     <p>Tussen al het andere leven door, tekent Daanjels om voortdurend bij te leren.
                         De schetsboekjes raken steeds vlotter gevuld.

@@ -10,7 +10,13 @@ $art = $data['art'];
       &nbsp;[ <?= $art['count'] ?> van <?= $art['total'] ?> ]&nbsp;
       <a id="next" href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['next'] ?>"></a>
     </nav>
-    <img src="<?= MEDIAROOT.$art['path'] ?>" alt="Painting <?= $data['page'] ?> <?= $art['title'] ?>">
+    <?php 
+      $dir = pathinfo(MEDIAROOT.$art['path'], PATHINFO_DIRNAME);
+      $filename = basename(MEDIAROOT.$art['path'], ".jpg");
+      $selectedImage = $dir."/".$filename;
+      $alt = "Painting ".$data['page'].' '.$art['title'];
+      echo insertPicture($selectedImage, $alt);
+    ?>
     <figcaption>
       <h3><?= $art['title'] ?></h3>
       <p><?= $art['caption'] ?></p>
@@ -20,6 +26,5 @@ $art = $data['art'];
 </section>
 
 <script>detailKeys();</script>
-<!-- adapt script for keypresses -->
 </body>
 </html>

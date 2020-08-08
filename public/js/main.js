@@ -15,7 +15,9 @@ function detailKeys() {
   function keyPressed(e) {
     if (e.keyCode === 27 || e.keyCode === 38 || e.keyCode === 40) {
       // console.log('Escape, up or down');
-      window.location.href='index';
+      var closedetail = document.getElementById('closedetail');
+      url = closedetail.getAttribute('href');
+      window.location.href=url;
       return;
     }
     if (e.keyCode === 37) {
