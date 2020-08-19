@@ -15,6 +15,9 @@ body {
     &.paper-wrap {
         background-image: url(#{$assets}/patterns/ep_naturalwhite.png);
     }
+    &.concrete-wrap {
+        background-image: url(#{$assets}/patterns/concrete_seamless.png);
+    }
 }
 a {
     text-decoration: none;

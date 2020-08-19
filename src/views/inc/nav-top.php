@@ -1,3 +1,4 @@
+<?php if (!isset($_SESSION['user_id'])) { ?>
 <nav class="topmenu">
     <ul>
         <?php 
@@ -15,7 +16,13 @@
                 echo '<li><em>'.$data['menu'].'</em></li>';
             } else {
                 echo '<li><a href="'.URLROOT.'/contact">Contact</a></li>';
-            };
-        ?>
+            } ?>
     </ul>
 </nav>
+<?php } else { ?>
+<nav class="topmenu admin">
+    <ul>
+        <li><a href="<?= URLROOT ?>/admin/logout">Logout</a></li>    
+    </ul>
+</nav>
+<?php } ?>

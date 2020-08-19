@@ -53,6 +53,9 @@ body.canvas-wrap {
 body.paper-wrap {
   background-image: url(../assets/patterns/ep_naturalwhite.png);
 }
+body.concrete-wrap {
+  background-image: url(../assets/patterns/concrete_seamless.png);
+}
 
 a {
   text-decoration: none;
@@ -271,10 +274,18 @@ form {
   text-align: center;
   padding-bottom: 2rem;
 }
+form h1 {
+  margin-bottom: 1rem;
+}
 
 .form {
   text-align: center;
   background-color: transparent;
+}
+
+pre {
+  color: #55554e;
+  padding: 1rem;
 }
 
 input, textarea {
@@ -282,6 +293,7 @@ input, textarea {
   min-width: 25rem;
   max-width: 25rem;
   margin: 1rem auto;
+  margin-top: 0.5rem;
   border: none;
   font-family: "Nunito", "Arial", sans-serif;
   font-weight: 400;
@@ -300,9 +312,12 @@ input[type=submit]:hover {
 }
 
 label {
+  display: block;
   font-family: "Nunito", "Arial", sans-serif;
   font-size: 1rem;
   color: #aa2222;
+  margin: 1rem auto;
+  margin-top: 0.5rem;
 }
 
 main > section {
@@ -519,7 +534,7 @@ footer details p, footer summary {
     padding-top: 2rem;
   }
   main section article p {
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 4.5rem;
   }
 }
 @media only screen and (min-width: 1200px) {

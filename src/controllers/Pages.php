@@ -110,11 +110,58 @@ class Pages extends Controller
     public function contact()
     {
         $data = [
-            'title'=>'Contacteer Daanjels',
-            'page' => 'contact',
-            'menu' => 'Contact',
-            'wrap' => 'paper',
-        ];
+            'title'         => 'Contacteer Daanjels',
+            'page'          => 'contact',
+            'menu'          => 'Contact',
+            'wrap'          => 'paper',
+            'voornaam'      => "",
+            'familienaam'   => "",
+            'email'         => "",
+            'bericht'       => "",
+            'fout'          => "",
+            'PH_voornaam'   => "Naam",
+            'PH_familienaam' => "Familienaam",
+            'PH_email'      => "E-mail",
+            'PH_bericht'    => "Jouw bericht",
+            'retval'        => "",
+            ];
+    
+        if (!empty($_POST)) {
+            $data['voornaam'] = trim(filter_input(INPUT_POST, 'Firstname', FILTER_SANITIZE_STRING));
+            $data['familienaam'] = trim(filter_input(INPUT_POST, 'Lastname', FILTER_SANITIZE_STRING));
+            $data['email'] = trim(filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_STRING));
+            $data['bericht'] = trim(filter_input(INPUT_POST, 'Message', FILTER_SANITIZE_STRING));
+            
+            if ($data['voornaam'] == '') { // geen voornaam ingevuld
+                $data['PH_voornaam'] = "Je hebt je naam niet ingevuld...";
+            } else if ($data['familienaam'] == '') { // geen familienaam ingevuld
+                $data['PH_familienaam'] = "Je hebt je familienaam niet ingevuld...";
+            } else if ($data['email'] == '') { // geen e-mail ingevuld
+                $data['PH_email'] = "Je hebt je e-mailadres niet ingevuld...";
+            } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+                $data['fout_email'] = "Controleer je e-mail adres even, dat lijkt niet correct.";
+            } else if ($data['bericht'] == '') { // geen bericht geschreven
+                $data['PH_bericht'] = "Je hebt geen bericht geschreven !!";
+            } else if (strlen($data['bericht']) > 1000) { // te lang bericht gemaakt
+                $data['fout_bericht'] = "Je bericht bevat <strong>".strlen($data['bericht'])." </strong>tekens. Slechts 1000 toegelaten.";
+            } else {
+                $to = "info@daanjels.be";
+                $subject = "Vraag via de site";
+                $message = $data['bericht'] . "\n" . $data['voornaam'] . " " . $data['familienaam'];
+                $headers[] = "From: " . $data['email'];
+                $headers[] = "Content-Type: text/plain; charset=utf-8";
+                $header = implode("\r\n", $headers);
+                $data['retval'] = mail ($to,$subject,$message,$header);
+                if( $data['retval'] == true ) {
+                    // echo "<br/><br/><br/><pre>Message is being sent...</pre>";
+                    header( 'refresh:3;url='.URLROOT.'/index' );
+                    // exit(0);
+                } else {
+                    echo "Message could not be sent...";
+                }
+            }
+        }
+    
         $this->view('pages/contact', $data);
     }
     public function design()
