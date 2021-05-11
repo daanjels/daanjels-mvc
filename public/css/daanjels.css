@@ -312,12 +312,176 @@ input[type=submit]:hover {
 }
 
 label {
-  display: block;
   font-family: "Nunito", "Arial", sans-serif;
   font-size: 1rem;
   color: #aa2222;
-  margin: 1rem auto;
-  margin-top: 0.5rem;
+}
+
+body::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.upload {
+  max-width: 1800px;
+  padding: 0 1em;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 350;
+}
+.upload figure {
+  float: left;
+  width: 100vh;
+  height: 100vh;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: #403a3a;
+}
+.upload figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload figure input {
+  display: block;
+  position: relative;
+  top: 200px;
+}
+.upload form {
+  width: 520px;
+  float: left;
+  text-align: left;
+}
+.upload form fieldset {
+  border-style: none;
+  margin-top: 0.5em;
+  box-sizing: border-box;
+  width: 500px;
+  position: relative;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+.upload form legend {
+  display: block;
+  width: 500px;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #403a3a;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-bottom: 0.2em;
+  /* padding: 0.5rem;
+  background-color: rgba(40, 40, 20, 0.1); */
+}
+.upload form input {
+  display: inline-block;
+  border-style: none;
+  border-color: #dedede;
+  font-size: 1em;
+  padding: 0.3em 0.3em;
+  margin: 0;
+  color: #403a3a;
+  cursor: pointer;
+  min-width: 370px;
+  position: absolute;
+  left: 130px;
+}
+.upload form input[type=radio] {
+  cursor: pointer;
+  margin-right: 0.2em;
+  margin-left: 1em;
+  width: auto;
+  position: relative;
+  left: 0;
+}
+.upload form input[type=checkbox] {
+  margin-right: 0.2em;
+  width: auto;
+  position: relative;
+  left: 0;
+}
+.upload form input[type=submit] {
+  display: block;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  border-style: none;
+  min-width: auto;
+  margin: 0 auto;
+  padding: 0.2em 1em;
+  position: static;
+  font-size: 1.5em;
+  box-shadow: 2px 5px 4px 1px rgba(40, 30, 30, 0.4);
+  background: #959595;
+  background: linear-gradient(to bottom, rgba(149, 149, 149, 0.7) 0%, rgba(40, 30, 30, 0.7) 50%, #281e1e 100%);
+}
+.upload form label {
+  font-size: 0.95em;
+  font-weight: 450;
+  line-height: 2em;
+  padding: 0.5em 0em;
+  color: #403a3a;
+}
+.upload form .required {
+  color: #ff0000;
+}
+.upload form textarea {
+  display: inline-block;
+  border-style: none;
+  border-color: #dedede;
+  font-size: 1em;
+  padding: 0.3em 0.3em;
+  min-width: 370px;
+  position: absolute;
+  left: 130px;
+  resize: none;
+  cursor: pointer;
+}
+.upload form select {
+  font-size: 1.1em;
+  min-width: 370px;
+  position: absolute;
+  left: 130px;
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+.upload form option {
+  font-size: 1.1em;
+  color: #403a3a;
+}
+
+table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888888;
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+td, th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #888888;
+  padding: 4px;
+}
+
+th {
+  background-color: #888888;
+  color: #eeeedd;
 }
 
 main > section {

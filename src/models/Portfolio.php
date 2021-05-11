@@ -22,7 +22,8 @@ class Portfolio
 
     public function getCollection($collection)
     {
-        $this->db->query('SELECT * FROM artworks');
+        // $this->db->query('SELECT * FROM artworks ORDER BY year DESC, art_id ASC');
+        $this->db->query('SELECT * FROM artworks ORDER BY position ASC');
         $artworks = (array) $this->db->resultSet(); // turn the resultset into an array
 
         $works = array();

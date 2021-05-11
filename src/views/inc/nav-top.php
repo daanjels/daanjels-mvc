@@ -22,6 +22,13 @@
 <?php } else { ?>
 <nav class="topmenu admin">
     <ul>
+    <?php
+        if ($data['page'] == "admin") {
+                echo '<li><em>admin</em></li>';
+            } else {
+                echo '<li><a href="'.URLROOT.'/admin/index">admin</a></li>';
+            };
+    ?>
         <li><a href="<?= URLROOT ?>/admin/logout">Logout</a></li>    
     </ul>
 </nav>
