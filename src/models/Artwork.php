@@ -49,6 +49,7 @@ class Artwork
     }
 
     public function getCollections()
+		// Where is this used??
     {
         $this->db->query('SELECT headline, name FROM portfolio');
 
@@ -59,4 +60,5 @@ class Artwork
             return false;
         }
     }
+
 }

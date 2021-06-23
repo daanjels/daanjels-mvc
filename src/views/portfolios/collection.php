@@ -9,6 +9,7 @@
 <section class="<?= $data['mosaic'] ?>">
 <?php 
 $works = $data['art'];
+// var_dump($works);
 if ($data['mosaic'] == 'pins') { // for the pins, build four columns
     $counter = 1;
     $cols = array('col 1' => [], 'col 2' => [], 'col 3' => [], 'col 4' => []);
@@ -32,7 +33,7 @@ if ($data['mosaic'] == 'pins') { // for the pins, build four columns
       $filename = basename(MEDIAROOT.$value['path'], ".jpg");
       $selectedImage = $dir."/".$filename;
         ?>
-        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$value['name'] ?>">
+        <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$value['url'] ?>">
           <figure class="mosaic">
             <?php echo insertsmallPicture($selectedImage, "Painting ".$data['page']." ".$value['title']); ?>
           </figure>
@@ -47,9 +48,13 @@ if ($data['mosaic'] == 'pins') { // for the pins, build four columns
       $filename = basename(MEDIAROOT.$art['path'], ".jpg");
       $selectedImage = $dir."/".$filename;
       $count++; ?>
-      <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['name'] ?>">
+      <a href="<?= URLROOT.'/portfolios/'.$data['page'].'/'.$art['url'] ?>">
         <figure class="mosaic">
-        <?php echo insertsmallPicture($selectedImage, "Painting ".$data['page']." ".$art['title']); ?>
+				<?php if ($data['mosaic'] == 'grid-2') {
+					echo inserthalfPicture($selectedImage, "Painting ".$data['page']." ".$art['title']);
+				} else {
+					echo insertsmallPicture($selectedImage, "Painting ".$data['page']." ".$art['title']);
+				} ?>
         </figure>
       </a><?php }
   } ?>

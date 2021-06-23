@@ -4,6 +4,7 @@ class Pages extends Controller
     public function __construct()
     {
         $this->pageModel = $this->model('Page');
+				$this->navigationModel = $this->model('Navigation');
         // activate models here: $this->exampleModel = $this->model('Example');
         // for now we'll keep this simple and do most stuff in the views
         // later on we may collect parts from the database

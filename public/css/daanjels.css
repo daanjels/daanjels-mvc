@@ -494,6 +494,20 @@ main > section img {
   width: 100%;
   padding: 1px;
 }
+main > section.grid-2 {
+  padding: 0.5rem 2rem;
+}
+main > section.grid-2 figure {
+  margin-right: -0.25em;
+  margin-top: -0.25em;
+}
+main > section.grid-2 figure.mosaic {
+  display: inline-block;
+  width: 50%;
+}
+main > section.grid-2 img {
+  padding: 5px;
+}
 main > section.grid-3 {
   padding: 0.5rem 2rem;
 }

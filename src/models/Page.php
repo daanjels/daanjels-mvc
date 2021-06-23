@@ -18,4 +18,5 @@ class Page
         $quote = $this->db->single();
         return $quote;
     }
+
 }

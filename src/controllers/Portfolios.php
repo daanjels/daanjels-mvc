@@ -3,7 +3,8 @@ class Portfolios extends Controller
 {
     public function __construct()
     {
-        $this->portfolioModel = $this->model('Portfolio'); // load the user model
+        $this->portfolioModel = $this->model('Portfolio'); // load the model
+				$this->navigationModel = $this->model('Navigation');
     }
 
     public function showCollection($collection, $name = null)
@@ -22,6 +23,7 @@ class Portfolios extends Controller
             $this->view('portfolios/collection', $data);
         } else { // if $name is given, show that artwork with details
             $art = $this->portfolioModel->getArtDetails($name);
+						// var_dump($art);
             $data['art'] = $art;
             $data['title'] = $data['art']['title'].' - '.$data['art']['caption'];
             $data['nav'] = 'false'; // this turns the navigation off, should refactor this later

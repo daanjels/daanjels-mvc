@@ -8,7 +8,18 @@ function insertsmallPicture($selectedImage, $alt)
         '<source media="(max-width: 1408px)" srcset="'.$selectedImage.'_384_.jpg">' .
         '<img src="'.$selectedImage.'_512_.jpg" alt="'.$alt.'"/>' .
         '</picture>';
-    return $insert;
+				return $insert;
+}
+
+function inserthalfPicture($selectedImage, $alt)
+{
+	$insert = '<picture>' .
+	'<source media="(max-width: 512px)" srcset="'.$selectedImage.'_256_.jpg">' .
+	'<source media="(max-width: 1024px)" srcset="'.$selectedImage.'_512_.jpg">' .
+	'<source media="(max-width: 1408px)" srcset="'.$selectedImage.'_768_.jpg">' .
+	'<img src="'.$selectedImage.'_1024_.jpg" alt="'.$alt.'"/>' .
+	'</picture>';
+	return $insert;
 }
 
 function insertPicture($selectedImage, $alt)
