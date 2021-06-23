@@ -33,7 +33,7 @@ class Pages extends Controller
                     '<h1>Portret</h1>
                     <p>Daanjels is kunstschilder, tekenaar en liefhebber van Argentijnse tango.
                     Hij is gepassioneerd door het weergeven van iemands persoonlijkheid.
-                    Als je graag een geschilderd portret laat maken van iemand die je lief is, neem gerust <a href="contact">contact </a>op!</p>
+                    Als je graag een geschilderd <a href="portfolios/portrait">portret</a> laat maken van iemand die je lief is, neem gerust <a href="contact">contact </a>op!</p>
                 </article>
                 <article>' . 
                     insertPicture($imagePainting, $altPainting) .

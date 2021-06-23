@@ -34,8 +34,9 @@ class Portfolios extends Controller
     public function index($collection = null, $artwork = null)
     {
         // the index is the default method and uses the second parameter in the url as the first argument ($collection)
-        if ($collection == null) {
-            $this->showCollection('portrait'); // if no collection is provided show the default
+				if ($collection == null) {
+					// $this->showCollection('portrait'); // if no collection is provided show the default
+            $this->showCollection(''); // if no collection is provided show the default
         }
         $this->showCollection($collection, $artwork); // if $artwork is null show the whole collection
     }

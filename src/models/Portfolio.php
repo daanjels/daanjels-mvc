@@ -13,9 +13,8 @@ class Portfolio
         // retrieve a collection
         // use the name of the collection as page 
         // use the description of the collection as title for the page 
-        $this->db->query('SELECT name as page, description as title, headline, introduction, wrap, mosaic FROM portfolio WHERE name = :collection');
+        $this->db->query('SELECT name as page, description as title, headline, introduction, wrap, mosaic FROM portfolio WHERE name LIKE :collection');
         $this->db->bind(':collection', $collection);
-        
         $details = $this->db->single();
         return $details;
     }
@@ -60,6 +59,39 @@ class Portfolio
 				return $arts;
     }
 
+		public function getStockDetails()
+    {
+      $details['page'] = 'stock';
+      $details['title'] = 'Stock van Daanjels';
+      $details['headline'] = 'Daanjels stock';
+      $details['introduction'] = 'Intro';
+      $details['wrap'] = 'canvas';
+      $details['mosaic'] = 'pins';
+      return $details;
+    }
+
+    public function getStock()
+    {
+				$this->db->query('SELECT * FROM sets_vw s INNER JOIN artworks a ON a.art_id = s.art_id
+					WHERE a.availability = :name');
+        $this->db->bind(':name', 'Te koop');
+				$artworks = (array) $this->db->resultSet();
+        $arts = array();
+        foreach($artworks as $key => $work) {
+					$arts[$key] = (array) $work;
+        }
+				return $arts;
+    }
+
+    public function getStockPrice($name)
+    {
+				$this->db->query('SELECT * FROM artworks a INNER JOIN sets_vw s WHERE s.url LIKE :name');
+        $this->db->bind(':name', $name);
+        $work = (array) $this->db->single(); // turn the database object into an array
+        
+        return $work;
+    }
+
     public function getArtDetails($name)
     {
         // $this->db->query('SELECT * FROM artworks WHERE name = :name');
@@ -72,7 +104,7 @@ class Portfolio
 				$this->db->query('SELECT * FROM sets_vw WHERE url = :name');
         $this->db->bind(':name', $name);
         $work = (array) $this->db->single(); // turn the database object into an array
-
+				var_dump($work);
         $works = $this->getCollection($work['collection']);
 
         // let's put a counter on top

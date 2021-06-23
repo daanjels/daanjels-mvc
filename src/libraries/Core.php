@@ -48,7 +48,8 @@ class Core
             // in this case we do not remove the 'method' from the url, keeping it as a parameter for the index method
             // this means we can use index as a default method which uses the url parameters as arguments
             }
-        // get params: add the values of the url in the params
+
+						// get params: add the values of the url in the params
         $this->params = $url ? array_values($url) : [];
 
         // instantiate controller class
