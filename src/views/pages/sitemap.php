@@ -1,11 +1,14 @@
 https://www.daanjels.be/
 https://www.daanjels.be/index      
 https://www.daanjels.be/about
+https://www.daanjels.be/expo
 https://www.daanjels.be/contact
 https://www.daanjels.be/portrait
+https://www.daanjels.be/hands
 https://www.daanjels.be/landscape
 https://www.daanjels.be/figurestudy
 https://www.daanjels.be/figure
 https://www.daanjels.be/bird
 https://www.daanjels.be/pleinair
 https://www.daanjels.be/summer
+https://www.daanjels.be/water

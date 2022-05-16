@@ -22,7 +22,7 @@ $art = $data['art'];
       <p><?= $art['caption'] ?></p>
     </figcaption>
   </figure>
-  <a id="closedetail" class="<?= $data['mosaic'] ?>" href="<?= URLROOT.'/portfolios/'.$data['page'] ?>">&nbsp;</a><!-- × -->
+  <a id="closedetail" class="<?= $data['mosaic'] ?>" href="<?= URLROOT.'/portfolios/'.$data['page'] ?>">&nbsp;</a>
 </section>
 
 <script>detailKeys();</script>
