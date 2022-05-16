@@ -6,18 +6,17 @@
  */
 class Core
 {
-    protected $currentController = 'Pages';
-    protected $currentMethod = 'index';
-    protected $params = [];
+    protected $currentController = 'Pages'; // set Pages as default controller class
+    protected $currentMethod = 'index'; // set Index as default method for the controller class
+    protected $params = []; // leave parameters for the method empty as default
 
     public function __construct()
     {
-        $url = $this->getURL(); // get the part that comes after  the
+        $url = $this->getURL(); // get the part that comes after the domain
 
-        // if there is nothing extra in the url, add Pages in front to turn it into a method
+        // if the url is empty there is nothing extra in the url, add Pages in front to turn it into a method
         if (empty($url)) {
             $url = ['Pages']; // it will default to index anyway
-            // echo '<h1>Empty url!</h1>';
         }
 
         // look in controllers for first part in url
@@ -25,12 +24,12 @@ class Core
             // use ../ to move from public, where this is called from, to src/controllers
             // capitalize the url to find the class which has a capital first letter
             $this->currentController = ucwords($url[0]);
-            // unset class
+            // unset the controller class
             unset($url[0]); // indexes stay the same [1] is still the method
             // echo '<h1>Class was foundl!</h1>';
         } elseif (count($url) == 1) { // if the first and single part is not a class, add Pages in front to turn it into a method
-            array_unshift($url, 'Pages');
-            $this->currentController = 'Pages';
+            array_unshift($url, 'Pages'); // becomes Pages > url
+           // $this->currentController = 'Pages';
         }
 
         // require the controller class
@@ -62,7 +61,6 @@ class Core
     
     public function getURL()
     {
-        // echo $_GET['url'];
         if(isset($_GET['url'])) {
             $url = rtrim($_GET['url'], '/'); // remove any trailing backslash
             $url = filter_var($url, FILTER_SANITIZE_URL); // remove unwanted content

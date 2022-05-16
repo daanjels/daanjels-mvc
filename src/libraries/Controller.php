@@ -11,7 +11,6 @@ class Controller
     {
         // require model class
         require_once '../src/models/' . $model . '.php';
-
         // Instantiate
         return new $model();
     }

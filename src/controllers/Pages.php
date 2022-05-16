@@ -6,14 +6,10 @@ class Pages extends Controller
         $this->pageModel = $this->model('Page');
 				$this->navigationModel = $this->model('Navigation');
         // activate models here: $this->exampleModel = $this->model('Example');
-        // for now we'll keep this simple and do most stuff in the views
-        // later on we may collect parts from the database
-        // especially to add stuff in the header (title, description), or to add classes (wrap)
     }
 
     public function index()
     {
-        // $example = $this->exampleModel->getExample();
         $imagePortrait = URLROOT.'/media/img/homeCloseUp';
         $altPortrait = 'Detail van ogen';
         $imagePainting = URLROOT.'/media/img/homePond';
@@ -50,7 +46,7 @@ class Pages extends Controller
                     <h1>Tekenen</h1>
                     <p>Tussen al het andere leven door, tekent Daanjels om voortdurend bij te leren.
                         De schetsboekjes raken steeds vlotter gevuld.
-                        Volg hem op <a href="https://www.instagram.com/daanjels">instagram</a>!</p>
+                        Volg hem op <a href="https://www.instagram.com/daanjels" target="blank">instagram</a>!</p>
                     <h4>Contact</h4>
                     <p>Bij vragen over het maken van een geschilderd portret, aankoop van een werk of over plein air activiteiten,
                         <a href="contact">contacteer ons</a>.</p>
@@ -108,7 +104,7 @@ class Pages extends Controller
         $this->view('pages/about', $data);
     }
 
-    public function contact()
+		public function contact()
     {
         $data = [
             'title'         => 'Contacteer Daanjels',
@@ -165,7 +161,8 @@ class Pages extends Controller
     
         $this->view('pages/contact', $data);
     }
-    public function design()
+
+		public function design()
     {
         $data = [
             'title'=>'Design Daanjels',
@@ -175,7 +172,8 @@ class Pages extends Controller
         ];
         $this->view('pages/design', $data);
     }
-    public function sitemap()
+
+		public function sitemap()
     {
         $data = [
             'title'=>'Sitemap Daanjels',

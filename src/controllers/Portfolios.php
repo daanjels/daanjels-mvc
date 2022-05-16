@@ -7,22 +7,19 @@ class Portfolios extends Controller
 				$this->navigationModel = $this->model('Navigation');
     }
 
-    public function showCollection($collection, $name = null)
+    public function showCollection($collection, $artwork = null)
     {
-        if (!$this->portfolioModel->getCollectionDetails($collection)) {
-            // if the collection does not exist use the default
-            // this can only happen when the url is typed in
-            // no need to redirect to an error page
+        if ($collection == null) {
             $collection = 'portrait';
         }
         $portfolio = $this->portfolioModel->getCollectionDetails($collection);
         $data = (array) $portfolio;
-        if ($name == null) { // if no $name is provided, show the full collection
+        if ($artwork == null) { // if no $name is provided, show the full collection
             $art = $this->portfolioModel->getCollection($collection);
             $data['art'] = $art;
             $this->view('portfolios/collection', $data);
         } else { // if $name is given, show that artwork with details
-            $art = $this->portfolioModel->getArtDetails($name);
+            $art = $this->portfolioModel->getArtDetails($artwork, $collection);
 						// var_dump($art);
             $data['art'] = $art;
             $data['title'] = $data['art']['title'].' - '.$data['art']['caption'];
