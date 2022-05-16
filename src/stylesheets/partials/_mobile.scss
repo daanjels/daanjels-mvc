@@ -21,6 +21,9 @@
             picture img {
                 height: 30rem;
             }    
+            form picture img {
+							height: 16rem;
+						}
         }
         section {
             padding: 0rem 1rem;
@@ -65,7 +68,11 @@
             picture img {
                 height: 36rem;
             }    
-        }
+            form picture img {
+							height: 16rem;
+						}
+					}    
+			}
         section {
             padding: 0rem 2rem;
             &.grid-3 {
@@ -84,7 +91,7 @@
             }
         }    
     }
-}
+
 
 @media only screen and (max-width: 600px) {
     html {
@@ -126,6 +133,9 @@
             picture img {
                 height: 24rem;
             }    
+            form picture img {
+							height: 16rem;
+						}
         }
         section {
             padding: 0 0;

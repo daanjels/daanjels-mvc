@@ -1,0 +1,114 @@
+#prices {
+/* This was the first iteration, with captions at the side.
+That didn't work too well on a smartphone */
+	font-family: $font-sans-serif;
+	// background-color: rgba(20, 0, 0, 0.1);
+	margin-top: 5vh;
+	margin-left: 0vw;
+	margin-right: 0vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
+	#closedetail {
+		position: fixed;
+		top: 0;
+		right: 0;
+		font-size: 1.5rem;
+		// flex-grow: 0;
+		width: 2.5rem;
+		background-image: url(#{$assets}/patterns/mosaic.svg);
+		background-repeat: no-repeat;
+		background-size: 1.5rem;
+		background-position-x: 0.5rem;
+		background-position-y: 0.5rem;
+		line-height: 2rem;
+		padding: 0.25rem 0;
+		background-color: $back-gray;
+		&.pins {
+			background-image: url(#{$assets}/patterns/mosaic-pins.svg);
+		}
+		&:hover {
+			background-color: $back-dark;
+		}
+	}
+
+	nav {
+		position: fixed;
+		left: 1vw;
+		color: $text-black;
+		background-color: none;
+		// height: 80vh;
+		// width: 100vw;
+		margin-top: 5vh;
+		a {
+			display: inline-block;
+			height: 80vh;
+			width: 49%;
+			font-family: $font-sans-serif;
+			// font-size: 0.9rem;
+			color: $text-black;
+			// flex-grow: 1;
+			padding: 0.25rem 1rem;
+			background-repeat: no-repeat;
+			background-size: 2rem;
+			// background-color: $back-gray;
+		}
+		a#prev{
+			background-image: url(#{$assets}/patterns/arrowl-dark.svg);
+			background-position-y: 30%;
+			background-position-x: left;
+		}
+		a#next {
+			background-image: url(#{$assets}/patterns/arrowr-dark.svg);
+			background-position-y: 30%;
+			background-position-x: right;
+		}
+	}
+
+	figure {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 45vw 33vw;
+		gap: 2vw;
+		picture {
+			margin-left: auto;
+		}
+		&.horizontal {
+			grid-template-columns: 80vw;
+			margin-left: 0;
+			margin-right: auto;
+			img {
+				max-width: 80vw;
+				max-height: 80vh;
+			}
+		}
+		&.square {
+			grid-template-columns: 60vw 18vw;
+			img {
+				max-width: 60vw;
+				max-height: 80vh;
+				margin-left: auto;
+			}
+		}
+		&.vertical {
+			grid-template-columns: 50vw 28vw;
+			img {
+				max-width: 50vw;
+				max-height: 80vh;
+				margin-left: auto;
+			}
+		}
+		figcaption {
+			margin-top: auto;
+			text-align: left;
+			color: $text-black;
+			h3 {
+				color: $text-black;
+			} 
+			p {
+				font-family: $font-sans-serif;
+				font-size: 0.8rem;
+				letter-spacing: 0.05rem;
+			}
+		}
+	}
+}
